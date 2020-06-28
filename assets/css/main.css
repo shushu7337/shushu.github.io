@@ -45,10 +45,11 @@ a a:focus {
 }
 
 p {
+  line-height: 200%;
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
   margin: 0px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 ul, ol {
@@ -285,7 +286,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .section-padding {
-  padding: 60px 0;
+  padding: 10px 0;
 }
 
 #about .img-thumb img {
@@ -325,7 +326,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   content: ':';
   color: #040404;
   font-size: 14px;
-  left: 77px;
+  left: 80px;
 }
 
 .about-profile .admin-sign {
@@ -387,7 +388,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .timeline .timelin-title {
   font-size: 20px;
   text-transform: uppercase;
-  margin-left: 25px;
+  margin-left: 40%;
 }
 
 .timeline li {
@@ -403,7 +404,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .timeline li .line-title {
   font-size: 16px;
-  line-height: 6px;
+  line-height: 32px;
 }
 
 .timeline li span {
@@ -476,7 +477,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  background: #fff !important;
+  background: #39393A !important;
 }
 
 .top-nav-collapse .navbar-brand {
@@ -488,7 +489,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
-  color: #333 !important;
+  color: #E6E6E6 !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
@@ -503,7 +504,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .indigo {
-  background: #fff;
+  background: #39393A;
 }
 
 .menu-bg {
@@ -520,11 +521,11 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link i:hover {
-  color: #21cff3;
+  color: #E9D758;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  color: #333;
+  color: #E6E6E6;
   font-weight: 700;
   padding: 0 17px;
   margin-top: 15px;
@@ -541,16 +542,16 @@ a.back-to-top:hover, a.back-to-top:focus {
 .navbar-expand-lg .navbar-nav li a:hover,
 .navbar-expand-lg .navbar-nav li .active > a,
 .navbar-expand-lg .navbar-nav li a:focus {
-  color: #00b4d9;
+  color: #E9D758;
   outline: none;
 }
 
-.navbar {
+.navbar { 
   padding: 0;
 }
 
 .navbar li.active a.nav-link {
-  color: #00b4d9;
+  color: #E9D758;
 }
 
 .dropdown-toggle::after {
@@ -708,8 +709,10 @@ a.back-to-top:hover, a.back-to-top:focus {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/hero-area.jpg) no-repeat;
+  /* background: url(../img/hero-area.jpg) no-repeat; */
+  background: rgb(255, 133, 82);
   background-size: cover;
+  height: 100vh;
 }
 
 #hero-area {
@@ -725,11 +728,12 @@ a.back-to-top:hover, a.back-to-top:focus {
   top: 0px;
   left: 0px;
   background: #0c0808;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 #hero-area .contents {
   padding: 175px 0px 120px;
+  margin-top: 120px;
 }
 
 #hero-area .contents h5 {
@@ -911,6 +915,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 .services-item {
   background: #fff;
   border-radius: 4px;
+  height: 260px;
   padding: 48px 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -1055,12 +1060,12 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 /* Footer Area Start */
 .footer-area {
-  background: #1C1C20;
+  background: #39393A;
 }
 
 .footer-area .footer-text p {
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 0px;
   color: #fff;
 }
 
@@ -1127,4 +1132,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 #copyright p a:hover {
   color: #00b4d9;
+}
+.dot{
+  width: auto;
 }
