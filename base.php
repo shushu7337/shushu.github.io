@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 class DB{
 // 設定屬性:用來建立PDO，與常用變數
     private $dsn="mysql:host=localhost;charset=utf8;dbname=db05";
@@ -102,7 +102,6 @@ public function count(...$arg){
 
 
 // --新增/更新資料--
-
     public function save($arg){
         if(!empty($arg['id'])){
             // update
@@ -125,6 +124,7 @@ public function count(...$arg){
     }
 
 // --刪除資料--
+
 public function del($arg){
     $sql="delete from $this->table ";
     // +參數
@@ -146,6 +146,7 @@ public function del($arg){
     // exec回傳被影響資料筆數
 }
 
+
 // --萬用語法--
 function q($sql){
     return $this->pdo->query($sql)->fetchAll();
@@ -153,17 +154,11 @@ function q($sql){
 
 }
 
+
 // --頁面導向--
+
 function to($url){
     header("location:".$url);
 }
 
-// 判斷使用者是否到訪過
-if(empty($_SESSION['visited'])){
-    $total=new DB('total');
-    $tt=$total->find(1);
-    $tt['total']++;
-    $total->save($tt);
-    $_SESSION['visited']=$tt['total'];
-}
 ?>
