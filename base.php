@@ -2,7 +2,7 @@
 
 class DB{
 // 設定屬性:用來建立PDO，與常用變數
-    private $dsn="mysql:host=localhost;charset=utf8;dbname=db05";
+    private $dsn="mysql:host=localhost;charset=utf8;dbname=resume";
     // 登入資料庫的帳號與密碼
     private $root="root";
     private $password="";

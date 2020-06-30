@@ -4,65 +4,59 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>卓越科技大學校園資訊系統</title>
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="css/bootstrap.css">    
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./js/jquery-3.4.1.min.js">   
+    <link rel="stylesheet" href="./js/js.js">   
     <style>
+        *{
+            margin:0;
+            padding:0;
+        }
         .sidebar{
             background:#D9D9D9;
-            width:30%;
+            width:10%;
             height:100%;
+            margin-left:10%;
         }
     </style>
 </head>
 
 <body>
-    <div id="ms" class="sidebar">
+    <div id="ms" class="sidebar" style="display:inline-block">
             <div id="lf" style="float:left;" >
                 <div id="menuput" class="dbor">
                     <!--主選單放此-->
                     <span class="t botli">後台管理選單</span>
                     <a style="color:#000;"
-                        href="admin.php?do=title">
+                        href="admin.php?do=profile">
                         <div class="mainmu">
-                            網站標題管理 </div>
+                            個人基本資料管理 </div>
                     </a>
-                    <a style="color:#000;" href="?do=ad">
+                    <a style="color:#000;" href="?do=portfolio">
                         <div class="mainmu">
-                            動態文字廣告管理 </div>
+                            作品管理 </div>
                     </a>
-                    <a style="color:#000;" href="?do=mvim">
+                    <a style="color:#000;" href="?do=skill">
                         <div class="mainmu">
-                            動畫圖片管理 </div>
+                            技能管理 </div>
                     </a>
-                    <a style="color:#000;" href="?do=image">
+                    <a style="color:#000;" href="?do=work_exp">
                         <div class="mainmu">
-                            校園映象資料管理 </div>
+                            經歷管理 </div>
                     </a>
-                    <a style="color:#000;" href="?do=total">
+                    <a style="color:#000;" href="?do=edu_exp">
                         <div class="mainmu">
-                            進站總人數管理 </div>
-                            
-                    </a>
-                    <a style="color:#000;" href="?do=bottom">
-                        <div class="mainmu">
-                            頁尾版權資料管理 </div>
-                    </a>
-                    <a style="color:#000;" href="?do=news">
-                        <div class="mainmu">
-                            最新消息資料管理 </div>
+                            學歷管理 </div>
                     </a>
                     <a style="color:#000;" href="?do=admin">
                         <div class="mainmu">
                             管理者帳號管理 </div>
                     </a>
-                    <a style="color:#000;" href="?do=menu">
-                        <div class="mainmu">
-                            選單管理 </div>
-                    </a>
                 </div>
             </div>  
         </div>    
         <div class="di"
-                style="height:540px; border:#999 1px solid; width:76.5%; margin:2px 0px 0px 0px; float:left; position:relative; left:20px;">
+                style="width:60%; margin:auto; display:inline-block;">
                 <!--正中央-->
                 <table width="100%">
                     <tbody>
@@ -75,21 +69,22 @@
                         </tr>
                     </tbody>
                 </table>
-                <?php 
-
-                        $do=(!empty($_GET['do']))?$_GET['do']:'title';
-                        $file='backend/'.$do.".php";
-                        //echo $file;
-				        // 判斷檔案是否存在
-				        if(file_exists($file)){
-                            include $file;
-                        }else{
-
-                            include 'backend/title.php';
-                        }
-                        
-				?>
             </div>
+            <script>
+            $(".sswww").hover(
+                function() {
+                    $("#alt").html("" + $(this).children(".all").html() + "").css({
+                        "top": $(this).offset().top - 50
+                    })
+                    $("#alt").show()
+                }
+            )
+            $(".sswww").mouseout(
+                function() {
+                    $("#alt").hide()
+                }
+            )
+            </script>
 </body>
 
 </html>
