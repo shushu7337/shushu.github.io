@@ -10,6 +10,7 @@ https://templatemo.com/tm-531-reflux
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 body {
     font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 #page-wraper {
@@ -228,7 +229,7 @@ html {
 }
 
 .menu {
-    left: 10%;
+  left: 6%;
   -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
   -webkit-overflow-scrolling: touch;
   background-color: #03738C;
@@ -298,7 +299,18 @@ html {
     left: 35%;
     position: relative;
     min-height: 100vh;
-    padding-bottom: 80px;
+    padding-bottom: 10%;
+    border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+}
+.section1 {
+    color: #fff;
+    width: 55%;
+    right: 10%;
+    left: 35%;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 20%;
+    padding-top: 15%;
     border-bottom: 3px solid rgba(250, 250, 250, 0.25);
 }
 
@@ -811,6 +823,18 @@ section.contact-me {
     font-weight: 400;
     color: #03738C;
 }
+.tt2{
+    font-size: 20px;
+    font-weight: 300;
+    color: #03738C;
+}
+.tt2 td:first-child{
+    width: 60px;
+    padding-left: 20px;
+    margin-right: 30px;
+    vertical-align: top;
+}
+
 .bbx{
     height: 400px;
 }
@@ -823,4 +847,22 @@ section.contact-me {
     height: 70px;
     margin-left: 80px;
     margin-bottom: 20px;
+}
+.e-h3{
+    color: #4C5D73;
+    font-weight: 600;
+    padding-bottom:20px;
+    border-bottom:1px  solid #4C5D73;
+}
+.section span{
+    font-size: 20px;
+    color:#4C5D73;
+}
+.ss2 h4{
+    width: auto;
+    height: 30px;
+    margin-bottom: 30px;
+}
+.sss2{
+    padding-top: 10px;
 }
