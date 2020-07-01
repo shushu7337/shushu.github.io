@@ -1,90 +1,135 @@
-﻿<?php include_once "base.php";?>
-<!DOCTYPE html
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>卓越科技大學校園資訊系統</title>
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./js/jquery-3.4.1.min.js">   
-    <link rel="stylesheet" href="./js/js.js">   
-    <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-        .sidebar{
-            background:#D9D9D9;
-            width:10%;
-            height:100%;
-            margin-left:10%;
-        }
-    </style>
-</head>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Autour+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/7b3164b4a9.js" crossorigin="anonymous"></script>
 
-<body>
-    <div id="ms" class="sidebar" style="display:inline-block">
-            <div id="lf" style="float:left;" >
-                <div id="menuput" class="dbor">
-                    <!--主選單放此-->
-                    <span class="t botli">後台管理選單</span>
-                    <a style="color:#000;"
-                        href="admin.php?do=profile">
-                        <div class="mainmu">
-                            個人基本資料管理 </div>
-                    </a>
-                    <a style="color:#000;" href="?do=portfolio">
-                        <div class="mainmu">
-                            作品管理 </div>
-                    </a>
-                    <a style="color:#000;" href="?do=skill">
-                        <div class="mainmu">
-                            技能管理 </div>
-                    </a>
-                    <a style="color:#000;" href="?do=work_exp">
-                        <div class="mainmu">
-                            經歷管理 </div>
-                    </a>
-                    <a style="color:#000;" href="?do=edu_exp">
-                        <div class="mainmu">
-                            學歷管理 </div>
-                    </a>
-                    <a style="color:#000;" href="?do=admin">
-                        <div class="mainmu">
-                            管理者帳號管理 </div>
-                    </a>
-                </div>
-            </div>  
-        </div>    
-        <div class="di"
-                style="width:60%; margin:auto; display:inline-block;">
-                <!--正中央-->
-                <table width="100%">
-                    <tbody>
-                        <tr>
-                            <td style="width:70%;font-weight:800; border:#333 1px solid; border-radius:3px;"
-                                class="cent"><a href="?do=admin" style="color:#000; text-decoration:none;">後台管理區</a>
-                            </td>
-                            <td><button onclick="document.cookie=&#39;user=&#39;;location.replace(&#39;?&#39;)"
-                                    style="width:99%; margin-right:2px; height:50px;">管理登出</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+    <title>SHU Zone</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- JS -->
+    <script src="assets/js/wow.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrapreboot.css">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="t-image">
+              <a href="#"><img src="assets/img/LOGO-USING.png" alt="" /></a>
             </div>
-            <script>
-            $(".sswww").hover(
-                function() {
-                    $("#alt").html("" + $(this).children(".all").html() + "").css({
-                        "top": $(this).offset().top - 50
-                    })
-                    $("#alt").show()
-                }
-            )
-            $(".sswww").mouseout(
-                function() {
-                    $("#alt").hide()
-                }
-            )
-            </script>
-</body>
+            <div class="image">
+            </div>
+            <h4 class="name">後臺管理</h4>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section0">登入者帳號管理</a></li>
+                <li><a href="#section1">學歷管理</a></li>
+                <li><a href="#section2">工作經歷管理</a></li>
+                <li><a href="#section3">技能管理</a></li>
+                <li><a href="#section4">作品集管理</a></li>
+              </ul>
+            </nav>
+         
+         
+            <div class="copyright-text">
+              <span>Copyright 2020 SHU Design</span>
+              <span class="login"><a href="front/login.php">LOGIN</a></span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
 
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+    </div>
+  </body>
 </html>
