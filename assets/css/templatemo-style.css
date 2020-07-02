@@ -447,7 +447,7 @@ button:hover {
 }
 
 .service-item:hover h4 {
-    color: #1e1e1e;
+    color: #ffffff;
 }
 
 .service-item:hover p {
@@ -456,23 +456,6 @@ button:hover {
 
 
 
-
-
-.service-item .third-service-icon {
-    background-image: url(../images/third-white-icon.png);
-}
-
-.service-item:hover .third-service-icon {
-    background-image: url(../images/third-main-icon.png);
-}
-
-.service-item .fourth-service-icon {
-    background-image: url(../images/fourth-white-icon.png);
-}
-
-.service-item:hover .fourth-service-icon {
-    background-image: url(../images/fourth-main-icon.png);
-}
 
 
 /* My Work */
