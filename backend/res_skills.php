@@ -1,6 +1,7 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli">管理者帳號管理</p>
-    <!-- 因為這裡被include到 admin.php 所以是從admin.php的位置去找尋 -->
+<?php include_once "./base.php" ?>
+<div>
+    <h3 class="bd">技能管理</h3>
+   
     <form method="post" action="api/edit.php">
         <table width="100%">
             <tbody>
@@ -10,12 +11,10 @@
                     <td width="10%">刪除</td>
                 </tr>
                 <?php
-                
                     $table=$do;
                     $db=new DB($table);
                     $rows=$db->all();
                     foreach($rows as $row){
-                        
                 ?>
                 <tr style="text-align: center;">
                     <td><input type="text" style="width:90%" name="acc[]" value="<?=$row['acc'];?>"></td>  
@@ -34,7 +33,7 @@
             <tbody>
                 <tr>
                     <td width="200px"><input type="button"
-                            onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/admin.php?table=<?=$table;?>&#39;)" value="新增管理帳號">
+                            onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/admin.php?table=<?=$table;?>&#39;)" value="新增管理者帳號">
                     </td>
                     <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置">
                     </td>

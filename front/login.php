@@ -1,20 +1,3 @@
-<!-- 來判斷是否登入 -->
-<!-- index檔已經載入了include檔 -->
-<?php
-// 拿到acc & pw
-if(!empty($_POST['acc']) && !empty($_POST['pw'])){
-    $admin=new DB("admin");
-    $acc=$_POST['acc'];
-    $pw=$_POST['pw'];
-    $chk=$admin->count(['acc'=>$acc,'pw'=>$pw]);
-    if($chk>0){
-        to("admin.php");
-        $_SESSION['login']=$acc;
-    }else{
-        echo "<script>alert('帳號或密碼錯誤')</script>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,19 +14,19 @@ if(!empty($_POST['acc']) && !empty($_POST['pw'])){
     <link rel="stylesheet" href="../assets/css/login.scss">
 </head>
 <body>
-<form class="login-form">
+<form class="login-form" method="post" action="../api/login.php">
   <p class="login-text">
     <i class="fas fa-user fa-4x"></i>
     </span>
   </p>
-  <input type="text" class="login-username" autofocus="true" required="true" placeholder="Account" />
-  <input type="password" class="login-password" required="true" placeholder="Password" />
+  <input type="text" class="login-username" autofocus="true" required="true" placeholder="Account" name="acc" id="acc"/>
+  <input type="password" class="login-password" required="true" placeholder="Password" name="pw" id="pw" />
   <div>
     <input type="submit" name="Login" value="Login" class="login-submit" />
-    <input type="submit" name="Login" value="InSign" class="login-submit" />
+    <input type="reset" name="Login" value="Reset" class="login-submit" />
 </div>
 </form>
-<a href="#" class="login-forgot-pass">forgot password?</a>
+<!-- <a href="#" class="login-forgot-pass">forgot password?</a> -->
 <div class="underlay-photo"></div>
 <div class="underlay-black"></div> 
 </body>
