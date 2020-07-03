@@ -1,3 +1,22 @@
+<?php 
+include_once "../base.php";
+if(!empty($_POST['acc']) && !empty($_POST['pw'])){
+  $admin=new DB("res_admin");
+  $acc=$_POST['acc'];
+  $pw=$_POST['pw'];
+  $chk=$admin->count(['acc'=>$acc,'pw'=>$pw]);
+  if($chk>0){
+    $_SESSION['login']=$acc;
+    to("../admin.php");
+  }else{
+      echo "
+      <script>
+          alert('無效登入，請重新登入');
+          location.href='login.php';
+      </script>";
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +33,7 @@
     <link rel="stylesheet" href="../assets/css/login.scss">
 </head>
 <body>
-<form class="login-form" method="post" action="../api/login.php">
+<form class="login-form" method="post" action="login.php">
   <p class="login-text">
     <i class="fas fa-user fa-4x"></i>
     </span>
