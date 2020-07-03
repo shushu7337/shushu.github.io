@@ -31,3 +31,10 @@ function cl(x)
 {
 	$(x).fadeOut();
 }
+
+function add (url){
+	$("#cover").fadeIn();	
+	$("#clr").fadeIn();
+	$(".boxxxx").load(url);
+	
+}
