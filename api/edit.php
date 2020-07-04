@@ -16,7 +16,7 @@ foreach($_POST['id'] as $key=>$id){
                 $row['sh']=($_POST['sh']==$id)?1:0;
             break;
 
-            case "admin":
+            case "res_admin":
                 // 逐筆跟新
                 $row['acc']=$_POST['acc'][$key];
                 $row['pw']=$_POST['pw'][$key];

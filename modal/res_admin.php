@@ -1,9 +1,9 @@
 
 
-<h3 class="cent">新增管理者帳號</h3>
+<h3 class="mt-3 text-center">新增管理者帳號</h3>
 <hr>
 <form action="api/add.php"  method="post" enctype="multipart/form-data">
-<table style="width:70%;margin:auto">
+<table style="width:60%;margin:auto">
 
     <tr>
         <td style="text-align:right">帳號：</td>

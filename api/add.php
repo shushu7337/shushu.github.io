@@ -1,5 +1,5 @@
 <?php
-include_once "./base.php";
+include_once "../base.php";
 $table=$_POST['table'];
 $db=new DB($table);
 
@@ -15,18 +15,36 @@ if(!empty($_FILES['img']['tmp_name'])){
 // 改成switch做判斷因應admin沒有相對應欄位
 switch($table){
 
-    case "title":
-        $data['text']=$_POST['text'];
+    case "res_edu_exp":
+        $data['edu_name']=$_POST['edu_name'];
+        $data['edu_date']=$_POST['edu_date'];
+        $data['edu_con']=$_POST['edu_con'];
+        $data['edu_title']=$_POST['edu_title'];
         $data['sh']=0;
     break;
 
-    case "admin":
+    case "res_admin":
         $data["acc"]=$_POST['acc'];
         $data["pw"]=$_POST['pw'];
     break;
-    case "menu":
-        $data["name"]=$_POST['name'];
-        $data["href"]=$_POST['href'];
+    case "res_work_exp":
+        $data['ser_name']=$_POST['ser_name'];
+        $data['ser_date']=$_POST['ser_date'];
+        $data['ser_con']=$_POST['ser_con'];
+        $data['ser_title']=$_POST['ser_title'];
+        $data['sh']=0;
+    break;
+    case "res_skills":
+        $data['web']=$_POST['web'];
+        $data['graphic']=$_POST['graphic'];
+        $data['others']=$_POST['others'];
+        $data['sh']=0;
+    break;
+    case "res_porfolio":
+        $data["title"]=$_POST['title'];
+        $data["point"]=$_POST['point'];
+        $data["type"]=$_POST['type'];
+        $data["sh"]=$_POST['sh'];
     break;
 
     default:
