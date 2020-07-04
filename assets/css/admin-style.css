@@ -198,7 +198,7 @@ html {
   box-sizing: border-box;
   height: 100vh;  
   max-height: 100vh !important;
-  max-width: 60vw !important;
+  max-width: 80vw !important;
   min-width: 45px !important;
   outline: none;
   overflow-x: hidden !important;
@@ -206,7 +206,7 @@ html {
   padding: 0;
   position: fixed !important;
   top: calc(0px);  
-  width: 10%;
+  width: 15%;
   will-change: transform;
   z-index: 9999 !important;
 }
@@ -576,4 +576,7 @@ html {
 .yel td
 {
 	text-align:center;
+}
+.bek input{
+    text-align: center;
 }
