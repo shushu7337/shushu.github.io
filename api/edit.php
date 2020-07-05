@@ -21,6 +21,12 @@ foreach($_POST['id'] as $key=>$id){
                 $row['acc']=$_POST['acc'][$key];
                 $row['pw']=$_POST['pw'][$key];
             break;
+
+            case "res_profile":
+                // 逐筆跟新
+                $row['acc']=$_POST['acc'][$key];
+                $row['pw']=$_POST['pw'][$key];
+            break;
             
             case "menu":
                 $row['name']=$_POST['name'][$key];

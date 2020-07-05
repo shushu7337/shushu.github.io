@@ -4,7 +4,6 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-
 /* Basic */
 
 input,
@@ -302,144 +301,17 @@ html {
 
 
 
-@media screen and (max-width: 1680px) {
-    .menu {
-        left: 5%;
-    }
-
-    .section {
-        color: #fff;
-        width: 75%;
-        right: 5%;
-        left: 30%;
-    }
-}
-
-@media screen and (max-width: 1680px) and (min-width: 846px) {
-    
-    .menu .social-network ul li a {
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-    }
-
-    .menu .social-network ul li {
-        margin: 0;
-    }
-
-    .menu .t-image {
-        margin-top: 30px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .menu {
-        left: 0%;
-    }
-
-    .right-image-post h4,
-    .left-image-post h4 {
-        margin-top: 0px;
-    }
-
-    .right-image-post p,
-    .left-image-post p {
-        margin-top: 15px;
-    }
-
-    .right-image-post .white-button,
-    .left-image-post .white-button {
-        margin-top: 25px;
-    }
-
-}
 
 .menu .container {
     padding-left: 0;
     padding-right: 0;
 }
 
-@media screen and (max-width: 1280px) and (min-width: 846px) {
-    .menu {
-        width: 25%;
-    }
-    .menu .image img{
-        width: 100%;
-    }
-}
 
 #menu-toggle,
 #menu-close {
     display: none;
 }  
-
-@media screen and (max-width: 845px) {        
-    #menu-toggle,
-    #menu-close {
-        display: inline-block;
-    }    
-
-    .menu {        
-        width: 320px;
-        -webkit-transform: translateX(-100%) !important;
-        transform: translateX(-100%) !important;
-        transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
-        transition: transform 233ms cubic-bezier(0, 0, 0.21, 1);
-        transition: transform 233ms cubic-bezier(0, 0, 0.21, 1), -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
-    }
-
-    .menu .image {
-        margin-top: 40px;        
-    }
-
-    .menu .image img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .menu .author-content {
-        margin: 20px 0px 40px 0px;
-    }
-
-    .menu .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .menu.open {
-        display: inline-block;
-        -webkit-transform: translateX(0) !important;
-                transform: translateX(0) !important;
-    }
-
-    .responsive-nav {
-        display: inline-block;
-    }
-    .section {
-        width: 94%;
-        right: 3%;
-        left: 3%;
-    }
-    .isotope-item {
-        width: 94%;
-        margin: 3%;
-    }
-    .left-image-post img {
-        margin-bottom: 30px;
-    }
-    .right-image-post img {
-        margin-top: 30px;
-    }
-    .isotope-item {
-        border-bottom: none;
-        text-align: center;
-    }
-    .isotope-toolbar {
-        margin-bottom: 20px;
-    }
-}
-@media screen and (min-width: 390px){}
-
 
 .fass{
     width: 70px;
@@ -526,15 +398,19 @@ html {
     font-family: 'Iceland', cursive;
   }
   .di{
-      padding: 50px;
+      padding: 20px;
       border-radius: 20px;
-      height: 800px;
-      width: 70%;
+      height: 900px;
+      width: 80%;
       box-shadow: 0px 0px 10px #999;
       position: fixed ;
-      left: 20%;
+      left: 18%;
       height: 80vh;
       margin-top: 5%;
+  }
+  .di td th{
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .admintable{

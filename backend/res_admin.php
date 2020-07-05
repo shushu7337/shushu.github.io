@@ -6,9 +6,9 @@
         <table width="100%">
             <tbody>
                 <tr class="yel">
-                    <td width="45%">帳號</td>
-                    <td width="45%">密碼</td>
-                    <td width="10%">刪除</td>
+                    <td width="30%">帳號</td>
+                    <td width="30%">密碼</td>
+                    <td width="30%">刪除</td>
                 </tr>
                 <?php
                     $table=$do;
@@ -17,8 +17,8 @@
                     foreach($rows as $row){
                 ?>
                 <tr style="text-align: center;">
-                    <td><input type="text" style="width:90%" name="acc[]" value="<?=$row['acc'];?>"></td>
-                    <td><input type="password" style="width:90%" name="pw[]" value="<?=$row['pw'];?>"></td>
+                    <td><input type="text" name="acc[]" size="10" value="<?=$row['acc'];?>"></td>
+                    <td><input type="password" name="pw[]" size="10" value="<?=$row['pw'];?>"></td>
                     <td> <input type="checkbox" name="del[]" value="<?=$row['id'];?>">刪除</td>
                     <!-- 藏值 -->
                     <input type="hidden" name="table" value="<?=$table;?>">

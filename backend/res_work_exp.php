@@ -42,18 +42,11 @@
                 ?>
             </tbody>
         </table>
-
-        <table style="margin-top:40px; width:70%;">
-            <tbody>
-                <tr>
-                    <td width="200px"><input type="button"
-                            onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/title.php?table=<?=$table;?>&#39;)"
-                            value="新增網站標題圖片">
-                    </td>
-                    <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        
+        <div class="container mt-5 ">
+            <input class="float-right ml-3 btn btn-outline-info" type="submit" value="修改確定">
+            <input class="float-right ml-5 btn btn-outline-info" type="reset" value="重置">
+            <button type="button" class="float-right mr-5 btn btn-outline-danger" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/res_admin.php?table=<?=$table;?>&#39;)">新增工作經歷</button>
+        </div>
     </form>
 </div>
