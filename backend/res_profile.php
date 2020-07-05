@@ -27,17 +27,17 @@
             <tbody>
                 <tr>
                     <th scope="row"><img src='pic/<?=$row['img'];?>' style="width:50px;height:50px"></th>
-                    <td><textarea name="text[]" style='width:90%;height:60px'><?=$row['intro'];?></textarea></td>
-                    <td><input type="text" name="text[]" size="5" value="<?=$row['name'];?>"></td>
-                    <td><input type="text" name="text[]" size="5" value="<?=$row['phone'];?>"></td>
-                    <td><input type="text" name="text[]" size="7" value="<?=$row['email'];?>"></td>
-                    <td><input type="text" name="text[]" size="5" value="<?=$row['birth'];?>"></td>
-                    <td><input type="text" name="text[]" size="3" value="<?=$row['location'];?>"></td>
+                    <td><textarea name="intro[]" style='width:90%;height:60px'><?=$row['intro'];?></textarea></td>
+                    <td><input type="text" name="name[]" size="5" value="<?=$row['name'];?>"></td>
+                    <td><input type="text" name="phone[]" size="5" value="<?=$row['phone'];?>"></td>
+                    <td><input type="text" name="email[]" size="7" value="<?=$row['email'];?>"></td>
+                    <td><input type="text" name="birth[]" size="5" value="<?=$row['birth'];?>"></td>
+                    <td><input type="text" name="location[]" size="3" value="<?=$row['location'];?>"></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
                     <td><input type="button" size="2"
-                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_title.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
+                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_img.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
                         value="更新"></td>
-                    <input type="hidden" name="table" value="title">
+                    <input type="hidden" name="table" value="<?=$table;?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                 </tr>
             <?php

@@ -7,7 +7,7 @@ $db=new DB($table);
 $data=[];
 if(!empty($_FILES['img']['tmp_name'])){
     $filename=$_FILES['img']['name'];
-    move_uploaded_file($_FILES['img']['tmp_name'],"../img/".$filename);
+    move_uploaded_file($_FILES['img']['tmp_name'],"../pic/".$filename);
     // 如果檔案上傳成功的話,就放到data陣列裡面
     $data['img']=$filename;
 }
@@ -17,9 +17,9 @@ switch($table){
 
     case "res_edu_exp":
         $data['edu_name']=$_POST['edu_name'];
+        $data['edu_dept']=$_POST['edu_dept'];
         $data['edu_date']=$_POST['edu_date'];
         $data['edu_con']=$_POST['edu_con'];
-        $data['edu_title']=$_POST['edu_title'];
         $data['sh']=0;
     break;
 
@@ -27,6 +27,7 @@ switch($table){
         $data["acc"]=$_POST['acc'];
         $data["pw"]=$_POST['pw'];
     break;
+    
     case "res_work_exp":
         $data['ser_name']=$_POST['ser_name'];
         $data['ser_date']=$_POST['ser_date'];
@@ -34,21 +35,22 @@ switch($table){
         $data['ser_title']=$_POST['ser_title'];
         $data['sh']=0;
     break;
+    
     case "res_skills":
         $data['web']=$_POST['web'];
         $data['graphic']=$_POST['graphic'];
         $data['others']=$_POST['others'];
         $data['sh']=0;
     break;
-    case "res_porfolio":
+    
+    case "res_portfolio":
         $data["title"]=$_POST['title'];
         $data["point"]=$_POST['point'];
         $data["type"]=$_POST['type'];
-        $data["sh"]=$_POST['sh'];
+        $data["sh"]=0;
     break;
 
     default:
-    $data['text']=$_POST['text'];
     $data['sh']=1;
 
 }

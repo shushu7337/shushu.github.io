@@ -26,15 +26,15 @@
             <tbody>
                 <tr>
                     <th scope="row"><img src='pic/<?=$row['img'];?>' style="width:150px;height:100px"></th>
-                    <td><input type="text" name="text[]" size="5" value="<?=$row['title'];?>"></td>
-                    <td><input type="text" name="text[]" size="5" value="<?=$row['point'];?>"></td>
-                    <td><input type="text" name="text[]" size="5" value="<?=$row['type'];?>"></td>
-                    <td><input type="checkbox " name="sh[]" size="5" value="<?=$row['id'];?>" <?=$isChk;?>></td>
+                    <td><input type="text" name="title[]" size="5" value="<?=$row['title'];?>"></td>
+                    <td><textarea name="point[]" style='width:90%;height:60px'><?=$row['point'];?></textarea></td>
+                    <td><input type="text" name="type[]" size="5" value="<?=$row['type'];?>"></td>
+                    <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
                     <td><input type="button" size="2"
-                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_title.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
+                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_img.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
                         value="更新"></td>
-                    <input type="hidden" name="table" value="title">
+                    <input type="hidden" name="table" value="<?=$table;?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                 </tr>
             <?php
@@ -46,7 +46,7 @@
         <div class="container mt-5 ">
             <input class="float-right ml-3 btn btn-outline-info" type="submit" value="修改確定">
             <input class="float-right ml-5 btn btn-outline-info" type="reset" value="重置">
-            <button type="button" class="float-right mr-5 btn btn-outline-danger" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/res_admin.php?table=<?=$table;?>&#39;)">新增作品集</button>
+            <button type="button" class="float-right mr-5 btn btn-outline-danger" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/res_portfolio.php?table=<?=$table;?>&#39;)">新增作品集</button>
         </div>
     </form>
 </div>

@@ -71,7 +71,7 @@ public function find($arg){
         $sql=$sql. " where `id`='$arg'";
     }
 
-    // echo $sql;
+    echo $sql;
     // 告訴pdo不要有索引值，只要有欄位名稱即可
     return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 }

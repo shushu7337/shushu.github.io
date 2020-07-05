@@ -25,16 +25,16 @@
             
             <tbody>
                 <tr>
-                    <th scope="row"><input type="text" style="font-size:15px; padding:1px 0" name="text[]" size="18" value="<?=$row['ser_name'];?>"></th>
-                    <td><input type="text" style="font-size:15px; padding:1px 0" name="text[]" size="15" value="<?=$row['ser_title'];?>"></td>
-                    <td><input type="text" style="font-size:15px; padding:1px 0" name="text[]" size="13" value="<?=$row['ser_date'];?>"></td>
-                    <td><textarea name="text[]" style='width:90%;height:60px'><?=$row['ser_con'];?></textarea></td>
+                    <th scope="row"><input type="text" style="font-size:15px; padding:1px 0" name="ser_name[]" size="18" value="<?=$row['ser_name'];?>"></th>
+                    <td><input type="text" style="font-size:15px; padding:1px 0" name="ser_title[]" size="15" value="<?=$row['ser_title'];?>"></td>
+                    <td><input type="text" style="font-size:15px; padding:1px 0" name="ser_date[]" size="13" value="<?=$row['ser_date'];?>"></td>
+                    <td><textarea name="ser_con[]" style='width:90%;height:60px'><?=$row['ser_con'];?></textarea></td>
                     <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
                     <td><input type="button" size="2"
                         onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_title.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
                         value="更新"></td>
-                    <input type="hidden" name="table" value="title">
+                    <input type="hidden" name="table" value="<?=$table;?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                 </tr>
             <?php
@@ -46,7 +46,7 @@
         <div class="container mt-5 ">
             <input class="float-right ml-3 btn btn-outline-info" type="submit" value="修改確定">
             <input class="float-right ml-5 btn btn-outline-info" type="reset" value="重置">
-            <button type="button" class="float-right mr-5 btn btn-outline-danger" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/res_admin.php?table=<?=$table;?>&#39;)">新增工作經歷</button>
+            <button type="button" class="float-right mr-5 btn btn-outline-danger" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/res_work_exp.php?table=<?=$table;?>&#39;)">新增工作經歷</button>
         </div>
     </form>
 </div>
