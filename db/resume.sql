@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-07-04 18:01:56
+-- 產生時間： 2020-07-06 01:17:18
 -- 伺服器版本： 10.4.11-MariaDB
 -- PHP 版本： 7.3.17
 
@@ -63,7 +63,8 @@ CREATE TABLE `res_edu_exp` (
 --
 
 INSERT INTO `res_edu_exp` (`id`, `edu_name`, `edu_date`, `edu_dept`, `edu_con`, `sh`) VALUES
-(1, '國立嘉義大學 | NATIONAL CHIAYI UNIVERSITY', 'Set.2011-Jun.2015\r\n', 'Department of Wood Based Materials and Design ', 'Honorable mention of The 3th SAKURA Award ', 0);
+(1, '國立嘉義大學 | NATIONAL CHIAYI UNIVERSITY', 'Set.2011-Jun.2015\r\n', 'Department of Wood Based Materials and Design ', 'Honorable mention of The 3th SAKURA Award ', 0),
+(2, '台灣大學', '2020-05-11', '機械管理學系', '安安', 0);
 
 -- --------------------------------------------------------
 
@@ -85,7 +86,9 @@ CREATE TABLE `res_portfolio` (
 --
 
 INSERT INTO `res_portfolio` (`id`, `title`, `point`, `img`, `sh`, `type`) VALUES
-(1, '月歷', '', 'calendar.png', 1, 'type');
+(1, '月歷', 'sdfsdf', 'calendar.png', 1, 'type'),
+(2, '楊', 'sdfsdfdfsgdsfg', 'sheep.png', 1, 'others'),
+(6, '文創小品', '234234', 'think.png', 0, 'PHP');
 
 -- --------------------------------------------------------
 
@@ -99,7 +102,7 @@ CREATE TABLE `res_profile` (
   `phone` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '電話',
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `intro` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `birth` date NOT NULL,
+  `birth` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `location` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `img` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -109,7 +112,7 @@ CREATE TABLE `res_profile` (
 --
 
 INSERT INTO `res_profile` (`id`, `email`, `phone`, `name`, `intro`, `birth`, `location`, `img`) VALUES
-(1, 'text@gmail.com', '0919921618', 'SHUHAO CHANG', 'During working, I not only take my responsibility seriously but also keep\r\n                learning the different skills in case I have to use it in another day. <br>\r\n                Since the opportunity always favors the prepared mind.<br>\r\n                Therefore,I enjoy attempting to challenge and progress continuously.<br>\r\n                \r\n                I’m really looking forward to putting my skills to use in a challenging environment.', '2020-07-03', '雙北/桃園', 'phone.png');
+(1, 'text@gmail.com', '0919921618', 'SHUHAO CHANG', 'During working, I not only take my responsibility seriously but also keep learning the different skills in case I have to use it in another day.     Since the opportunity always favors the prepared mind. Therefore,I enjoy attempting to challenge and progress continuously.  I’m really looking forward to putting my skills to use in a challenging environment.', '2020-05-12', '新北/桃園', 'me1.jpg');
 
 -- --------------------------------------------------------
 
@@ -131,8 +134,8 @@ CREATE TABLE `res_skills` (
 
 INSERT INTO `res_skills` (`id`, `web`, `graphic`, `others`, `sh`) VALUES
 (1, 'JavaScript', 'Adobe Photoshop', 'Git', 1),
-(2, 'CSS/HTML5', 'Adobe Illustrator', 'Github', 1),
-(3, 'Bootstrap', 'Zbrush', 'AlphaCam', 1),
+(2, 'CSS/HTML5', 'Adobe Illustrator', 'Github', 0),
+(3, 'Bootstrap', 'Zbrush', 'AlphaCam', 0),
 (4, 'PHP', 'Zbrush', 'SolidWorks', 1),
 (5, 'MySQL/MariaDB', '3ds Max', 'AutoCad', 1);
 
@@ -156,7 +159,8 @@ CREATE TABLE `res_work_exp` (
 --
 
 INSERT INTO `res_work_exp` (`id`, `ser_name`, `ser_date`, `ser_con`, `ser_title`, `sh`) VALUES
-(1, 'KD_科定企業股份有限公司 ', 'Jun.2016 - Nov.2019', '●Product Reverse Engineering \r\n●3D Drawing & Modleing \r\n●4 Axis & 5 Axis  CNC Programmer and Operator \r\n●Product Mass Production', 'PRODUCT DEVELOPER', 0);
+(1, 'KD_科定企業股份有限公司 ', 'Jun.2016 - Nov.2019', '●Product Reverse Engineering \r\n●3D Drawing & Modleing \r\n●4 Axis & 5 Axis  CNC Programmer and Operator \r\n●Product Mass Production', 'PRODUCT DEVELOPER', 0),
+(2, '國鉅機械股份有限公司', ' Jul.2015-Mar.2016', 'Welding and metal structure processing  Mechanical equipment assembly and maintenance ', 'MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN', 0);
 
 --
 -- 已傾印資料表的索引
@@ -212,13 +216,13 @@ ALTER TABLE `res_admin`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_edu_exp`
 --
 ALTER TABLE `res_edu_exp`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_portfolio`
 --
 ALTER TABLE `res_portfolio`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_profile`
@@ -230,13 +234,13 @@ ALTER TABLE `res_profile`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_skills`
 --
 ALTER TABLE `res_skills`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_work_exp`
 --
 ALTER TABLE `res_work_exp`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
