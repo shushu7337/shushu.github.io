@@ -310,6 +310,10 @@ https://templatemo.com/tm-531-reflux
       </section>
 
 <!-- 作品 -->
+<?php
+  $db=new DB("res_portfolio");
+  $rows=$db->all();
+?>
       <section class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-07-06 17:20:22
+-- 產生時間： 2020-07-06 18:32:06
 -- 伺服器版本： 10.4.11-MariaDB
--- PHP 版本： 7.3.17
+-- PHP 版本： 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -91,7 +91,8 @@ INSERT INTO `res_portfolio` (`id`, `title`, `point`, `img`, `sh`, `type`) VALUES
 (8, '統一發票兌獎系統', '以PHP做系統基礎建置，並搭配HTML/CSS做外觀及網頁架構的設立', 'invoice.png', 1, 'php'),
 (9, '類比時鐘', '以JavaScript開發的小品網頁時鐘', 'clock.png', 1, 'javascript'),
 (10, '家飾', '負責以逆向工程並做圖形修整，規畫並進行CNC編碼、與量產規劃。', 'all.png', 1, 'others'),
-(11, '餐桌', '負責透過逆向工程與CNC編碼工法來製作出精準榫卯工法之餐桌', 'table.png', 0, 'Others');
+(11, '餐桌', '負責透過逆向工程與CNC編碼工法來製作出精準榫卯工法之餐桌', 'table.png', 1, 'javascript'),
+(12, '沙發', '負責逆向工程建模並做樣式修整，CNC製造、量產規劃', 'sofa.png', 0, 'javascript');
 
 -- --------------------------------------------------------
 
@@ -225,7 +226,7 @@ ALTER TABLE `res_edu_exp`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_portfolio`
 --
 ALTER TABLE `res_portfolio`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_profile`
