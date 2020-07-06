@@ -42,6 +42,10 @@ https://templatemo.com/tm-531-reflux
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
         <i class="fa fa-bars" id="menu-toggle"></i>
+        <?php 
+              $total=new DB('res_profile');
+              $profile=$total->find(1);
+            ?>
         <div id="menu" class="menu">
           <i class="fa fa-times" id="menu-close"></i>
           <div class="container">
@@ -49,9 +53,17 @@ https://templatemo.com/tm-531-reflux
               <a href="#"><img src="assets/images/LOGO-USING.png" alt="" /></a>
             </div>
             <div class="image">
-              <a href="#"><img src="pic/me1.jpg" alt="" /></a>
+              <a href="#">
+                
+                <img src="pic/<?=$profile['img'];?>" alt="" />
+                <!-- <img src="pic/me1.jpg" alt="" /> -->
+              </a>
             </div>
-            <h4 class="name">SHU HAO CHANG</h4>
+            <?php 
+              $total=new DB('res_profile');
+              $profile=$total->find(1);
+            ?>
+            <h4 class="name"><?=$profile['name'];?></h4>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
                 <li><a href="#section0">About</a></li>
@@ -97,7 +109,8 @@ https://templatemo.com/tm-531-reflux
               <?php
                     }else{
                       ?>
-              <span class="login"onclick="location.replace(&#39;api/logout.php&#39;)" ><a href="#">LOGOUT</a></span>
+              <span class="login" onclick="location.replace(&#39;api/logout.php&#39;)" ><a href="#">Logout</a></span>
+              <span class="login"><a href="admin.php">Manage</a></span>
               <?php
                     }
                 ?>
@@ -141,50 +154,45 @@ https://templatemo.com/tm-531-reflux
         </div>
         <!-- square -->
           <div class="row">
-            <div class="col-md-4 bbx">
+            <div class="col-lg-4 bbx">
               <div class="service-item">
                 <i class="fas fa-laptop fa-4x fass"></i>
                 <div class=" service-icon"></div>
                 <h4>Web Programming</h4>
                 <table class="tt1">
                   <tbody>
+                  <?php
+                    $db=new DB("res_skills");
+                    $rows=$db->all();
+                    foreach($rows as $row){
+                  ?>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>JavaScript</td>
+                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i><?=$row['web'];?></td>
                     </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>CSS/HTML5</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Bootstrap</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>PHP</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>MySQL/MariaDB</td>
-                    </tr>
+                    <?php
+                      }
+                    ?>
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="col-md-4 bbx">
+            <div class="col-lg-4 bbx">
               <div class="service-item">
                 <i class="fas fa-paint-brush fa-4x fass"></i>
                 <h4>Graphic Design</h4>
                 <table class="tt1">
                   <tbody>
+                  <?php
+                      $db=new DB("res_skills");
+                      $rows=$db->all();
+                      foreach($rows as $row){
+                    ?>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Adobe Photoshop</td>
+                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i><?=$row['graphic'];?></td>
                     </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Adobe Illustrator</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Zbrush</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>3ds Max</td>
-                    </tr>
+                    <?php
+                      }
+                    ?>
                   </tbody>
                 </table>
               </div>
@@ -196,28 +204,26 @@ https://templatemo.com/tm-531-reflux
                 <h4>Others</h4>
                 <table class="tt1">
                   <tbody>
+                  <?php
+                      $db=new DB("res_skills");
+                      $rows=$db->all();
+                      foreach($rows as $row){
+                    ?>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Git</td>
+                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i><?=$row['others'];?></td>
                     </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Github</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>AlphaCam</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>SolidWorks</td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>AutoCad</td>
-                    </tr>
+                    <?php
+                      }
+                    ?>
                   </tbody>
                   </table> 
               </div>
             </div>
           </div>
       </section>
+      
         <!-- Experience -->
+        <!-- work -->
       <section class="section my-services ss2" data-section="section2">
         <div class="container">
           <div class="section-heading">
@@ -225,95 +231,81 @@ https://templatemo.com/tm-531-reflux
             <div class="line-dec"></div>
           </div>
           <h3 class="e-h3">WORK EXPERIENCE</h3>
-          <div class="row">
+          <div class="mt-3 row">
+            <?php
+            $db=new DB("res_work_exp");
+            $rows=$db->all();
+            foreach($rows as $row){
+            ?>
             <div class="col-md-6">
               <div class="service-item">
                 <div class="first-service-icon service-icon"></div>
-                <div><h4>PRODUCT DEVELOPER</h4></div>
+                <div><h4><?=$row["ser_title"]?></h4></div>
+                <!-- <div><h4>PRODUCT DEVELOPER</h4></div> -->
                 <div class="sss2">
                   <span>
-                    KD_科定企業股份有限公司
+                    <?=$row["ser_name"]?>
                   </span>
+                  <!-- <span>
+                    KD_科定企業股份有限公司
+                  </span> -->
                     <span>|</span>
                     <span>
+                      <?=$row["ser_date"]?>
+                    </span>
+                    <!-- <span>
                     Jun.2016 - Nov.2019
-                    </span>
+                    </span> -->
                 </div>
-                <table class="tt2">
-                  <tbody>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>Product Reverse Engineering </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>3D Drawing & Modeling </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>4 Axis & 5 Axis CNC Programmer and Operator </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>Product Mass Production</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="tt2"><?=nl2br($row["ser_con"]);?></div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="second-service-icon service-icon"></div>
-                <div><h4>MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN</h4></div>
-                  <div class="sss2">
-                   <span>
-                      國鉅機械股份有限公司  
-                    </span>
-                      <span>|</span>
-                    <span>
-                      Jul.2015-Mar.2016
-                    </span>
-                  </div>
-                <table class="tt2">
-                  <tbody>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>Welding and metal structure processing </td>
-                    </tr>
-                    <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>Mechanical equipment assembly and maintenance </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+
+            <?php
+              }
+            ?>
+          </div> 
+          <!-- education -->
           <div>
             <h3 class="e-h3">EDUCATION</h3>
-             <div class="col-md-12">
+             <div class="mt-3 col-xl-12">
+              <?php
+                  $db=new DB("res_edu_exp");
+                  $rows=$db->all();
+                  foreach($rows as $row){
+              ?>
               <div class="service-item">
                 <div class="first-service-icon service-icon"></div>
-                <div><h4>NATIONAL CHIAYI UNIVERSITY</h4></div>
+                <div><h4><?=$row["edu_name"]?></h4></div>
+                <!-- <div><h4>NATIONAL CHIAYI UNIVERSITY</h4></div> -->
                 <span>
-                  Department of Wood Based Materials and Design
+                <?=$row["edu_dept"]?>
                 </span>
+                <!-- <span>
+                  Department of Wood Based Materials and Design
+                </span> -->
                 <span>|</span>
                 <span>
-                  Set.2011-Jun.2015
+                  <?=$row["edu_date"]?>
                 </span>
+                <!-- <span>
+                  Set.2011-Jun.2015
+                </span> -->
                 <table class="tt2">
                   <tbody>
                     <tr>
                       <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td>Honorable mention of The 3th SAKURA Award</td>
+                      <td><?=$row["edu_con"]?></td>
+                      <!-- <td>Honorable mention of The 3th SAKURA Award</td> -->
                     </tr>
-                    
                   </tbody>
                 </table>
               </div>
               </div>
             </div>
+            <?php
+              }
+            ?>
         </div>
       </section>
 

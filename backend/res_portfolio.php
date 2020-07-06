@@ -28,7 +28,20 @@
                     <th scope="row"><img src='pic/<?=$row['img'];?>' style="width:150px;height:100px"></th>
                     <td><input type="text" name="title[]" size="5" value="<?=$row['title'];?>"></td>
                     <td><textarea name="point[]" style='width:90%;height:60px'><?=$row['point'];?></textarea></td>
-                    <td><input type="text" name="type[]" size="5" value="<?=$row['type'];?>"></td>
+                    <td>
+                        <?php
+                            $selectjs=($row['type']=="javascript")?"selected":"";
+                            $selectphp=($row['type']=="php")?"selected":"";
+                            $selectother=($row['type']=="others")?"selected":"";
+                        ?>
+                        <select name="type[]" class="form-control">
+                          <option name="javascript" value="javascript" <?=$selectjs;?>>JavaScript</option>
+                          <option name="php" value="php" <?=$selectphp;?>>PHP</option>
+                          <option name="others" value="others" <?=$selectother;?>>Others</option>
+                        </select>
+
+                        <!-- if() -->
+                    </td>
                     <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
                     <td><input type="button" size="2"
