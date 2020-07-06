@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-07-06 01:17:18
+-- 產生時間： 2020-07-06 10:37:13
 -- 伺服器版本： 10.4.11-MariaDB
--- PHP 版本： 7.3.17
+-- PHP 版本： 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -63,8 +64,7 @@ CREATE TABLE `res_edu_exp` (
 --
 
 INSERT INTO `res_edu_exp` (`id`, `edu_name`, `edu_date`, `edu_dept`, `edu_con`, `sh`) VALUES
-(1, '國立嘉義大學 | NATIONAL CHIAYI UNIVERSITY', 'Set.2011-Jun.2015\r\n', 'Department of Wood Based Materials and Design ', 'Honorable mention of The 3th SAKURA Award ', 0),
-(2, '台灣大學', '2020-05-11', '機械管理學系', '安安', 0);
+(1, '國立嘉義大學-NATIONAL CHIAYI UNIVERSITY', 'Set.2011-Jun.2015\r\n', 'Department of Wood Based Materials and Design ', 'Honorable mention of The 3th SAKURA Award ', 0);
 
 -- --------------------------------------------------------
 
@@ -86,9 +86,12 @@ CREATE TABLE `res_portfolio` (
 --
 
 INSERT INTO `res_portfolio` (`id`, `title`, `point`, `img`, `sh`, `type`) VALUES
-(1, '月歷', 'sdfsdf', 'calendar.png', 1, 'type'),
-(2, '楊', 'sdfsdfdfsgdsfg', 'sheep.png', 1, 'others'),
-(6, '文創小品', '234234', 'think.png', 0, 'PHP');
+(1, '個人月歷', '以html/css完成主要框架及效果\r\n年月份功能以PHP作呈現', 'calendar.png', 0, 'php'),
+(6, '文創小品', '負責從設計、製作研發及量產規劃的完整流程項目', 'think.png', 0, 'others'),
+(7, '倒數計時器', '透過JS來製作倒數功能表', 'countclock.png', 0, 'javascript'),
+(8, '統一發票兌獎系統', '以PHP做系統基礎建置，並搭配HTML/CSS做外觀及網頁架構的設立', 'invoice.png', 0, 'PHP'),
+(9, '類比時鐘', '以JavaScript開發的小品網頁時鐘', 'clock.png', 0, 'JavaScript'),
+(10, '家飾_象', '負責以逆向工程並做圖形修整，規畫並進行CNC編碼、與量產規劃。', 'all.png', 0, 'Others');
 
 -- --------------------------------------------------------
 
@@ -134,8 +137,8 @@ CREATE TABLE `res_skills` (
 
 INSERT INTO `res_skills` (`id`, `web`, `graphic`, `others`, `sh`) VALUES
 (1, 'JavaScript', 'Adobe Photoshop', 'Git', 1),
-(2, 'CSS/HTML5', 'Adobe Illustrator', 'Github', 0),
-(3, 'Bootstrap', 'Zbrush', 'AlphaCam', 0),
+(2, 'CSS/HTML5', 'Adobe Illustrator', 'Github', 1),
+(3, 'Bootstrap', 'Zbrush', 'AlphaCam', 1),
 (4, 'PHP', 'Zbrush', 'SolidWorks', 1),
 (5, 'MySQL/MariaDB', '3ds Max', 'AutoCad', 1);
 
@@ -159,8 +162,8 @@ CREATE TABLE `res_work_exp` (
 --
 
 INSERT INTO `res_work_exp` (`id`, `ser_name`, `ser_date`, `ser_con`, `ser_title`, `sh`) VALUES
-(1, 'KD_科定企業股份有限公司 ', 'Jun.2016 - Nov.2019', '●Product Reverse Engineering \r\n●3D Drawing & Modleing \r\n●4 Axis & 5 Axis  CNC Programmer and Operator \r\n●Product Mass Production', 'PRODUCT DEVELOPER', 0),
-(2, '國鉅機械股份有限公司', ' Jul.2015-Mar.2016', 'Welding and metal structure processing  Mechanical equipment assembly and maintenance ', 'MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN', 0);
+(1, 'KD_科定企業股份有限公司 ', 'Jun.2016 - Nov.2019', '●　Product Reverse Engineering \r\n●　3D Drawing & Modleing \r\n●　4 Axis & 5 Axis  CNC Programmer and 　　　Operator \r\n●　Product Mass Production', 'PRODUCT DEVELOPER', 0),
+(2, '國鉅機械股份有限公司', ' Jul.2015-Mar.2016', '●　Welding and metal structure processing  ●　Mechanical equipment assembly and 　maintenance ', 'MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN', 0);
 
 --
 -- 已傾印資料表的索引
@@ -222,7 +225,7 @@ ALTER TABLE `res_edu_exp`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_portfolio`
 --
 ALTER TABLE `res_portfolio`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_profile`
