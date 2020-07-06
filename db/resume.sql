@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-07-06 10:37:13
+-- 產生時間： 2020-07-06 17:20:22
 -- 伺服器版本： 10.4.11-MariaDB
--- PHP 版本： 7.4.3
+-- PHP 版本： 7.3.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -86,12 +85,13 @@ CREATE TABLE `res_portfolio` (
 --
 
 INSERT INTO `res_portfolio` (`id`, `title`, `point`, `img`, `sh`, `type`) VALUES
-(1, '個人月歷', '以html/css完成主要框架及效果\r\n年月份功能以PHP作呈現', 'calendar.png', 0, 'php'),
-(6, '文創小品', '負責從設計、製作研發及量產規劃的完整流程項目', 'think.png', 0, 'others'),
-(7, '倒數計時器', '透過JS來製作倒數功能表', 'countclock.png', 0, 'javascript'),
-(8, '統一發票兌獎系統', '以PHP做系統基礎建置，並搭配HTML/CSS做外觀及網頁架構的設立', 'invoice.png', 0, 'PHP'),
-(9, '類比時鐘', '以JavaScript開發的小品網頁時鐘', 'clock.png', 0, 'JavaScript'),
-(10, '家飾_象', '負責以逆向工程並做圖形修整，規畫並進行CNC編碼、與量產規劃。', 'all.png', 0, 'Others');
+(1, '個人月歷', '以html/css完成主要框架及效果\r\n年月份功能以PHP作呈現', 'calendar.png', 1, 'php'),
+(6, '文創小品', '負責從設計、製作研發及量產規劃的完整流程項目', 'think.png', 1, 'others'),
+(7, '倒數計時器', '透過JS來製作倒數功能表', 'countclock.png', 1, 'javascript'),
+(8, '統一發票兌獎系統', '以PHP做系統基礎建置，並搭配HTML/CSS做外觀及網頁架構的設立', 'invoice.png', 1, 'php'),
+(9, '類比時鐘', '以JavaScript開發的小品網頁時鐘', 'clock.png', 1, 'javascript'),
+(10, '家飾', '負責以逆向工程並做圖形修整，規畫並進行CNC編碼、與量產規劃。', 'all.png', 1, 'others'),
+(11, '餐桌', '負責透過逆向工程與CNC編碼工法來製作出精準榫卯工法之餐桌', 'table.png', 0, 'Others');
 
 -- --------------------------------------------------------
 
@@ -225,7 +225,7 @@ ALTER TABLE `res_edu_exp`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_portfolio`
 --
 ALTER TABLE `res_portfolio`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `res_profile`
