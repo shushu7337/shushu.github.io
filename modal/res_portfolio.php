@@ -18,9 +18,9 @@
         <td style="text-align:right">作品分類 : </td>
         <td>
             <select name="type" class="form-control">
-              <option name="javascript">JavaScript</option>
-              <option name="php">PHP</option>
-              <option name="others">Others</option>
+              <option name="JavaScript">JavaScript</option>
+              <option name="PHP">PHP</option>
+              <option name="Others">Others</option>
             </select>
         </td>
     </tr>

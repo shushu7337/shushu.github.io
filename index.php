@@ -87,15 +87,23 @@ https://templatemo.com/tm-531-reflux
             <div class="social-network">
               <ul class="soial-icons">
                 <li>
-                  <a href=""
+                  <a href="#"
                     ><i class="fa fa-facebook"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="dreamsky1208@gmail.com"
+                    ><i class="far fa-envelope"></i></i
+                  ></a>
                 </li>
-                <li>
+                <!-- <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li> -->
+                <!-- <li>
                   <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li> -->
+                <li>
+                  <a href="https://github.com/shushu7337"><i class="fab fa-github"></i></a>
                 </li>
               </ul>
             </div>
@@ -125,7 +133,7 @@ https://templatemo.com/tm-531-reflux
               <div class="row">
                 <div class="col-md-12 col-sm-12 text-center">
                   <div class="contents">
-                    <img src="assets/images/LOGO-USINGT.png" class="wow fadeInUp animated" style=" animation-delay:0.1s;" alt="" />
+                    <img src="assets/images/LOGO-USINGT.png" class="wow fadeInUp animated" style=" animation-delay:0.1s; margin-bottom:100px;" alt="" />
                     <h1 class="wow fadeInUp animated set1" style="animation-delay:0.3s">
                       Hi This is
                     </h1>
@@ -167,7 +175,10 @@ https://templatemo.com/tm-531-reflux
                     foreach($rows as $row){
                   ?>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i><?=$row['web'];?></td>
+                      <td>
+                        <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
+                        -　<?=$row['web'];?>
+                      </td>
                     </tr>
                     <?php
                       }
@@ -188,7 +199,10 @@ https://templatemo.com/tm-531-reflux
                       foreach($rows as $row){
                     ?>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i><?=$row['graphic'];?></td>
+                      <td>
+                        <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
+                        -　<?=$row['graphic'];?>
+                      </td>
                     </tr>
                     <?php
                       }
@@ -210,7 +224,10 @@ https://templatemo.com/tm-531-reflux
                       foreach($rows as $row){
                     ?>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i><?=$row['others'];?></td>
+                      <td>
+                        <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
+                        -　<?=$row['others'];?>
+                      </td>
                     </tr>
                     <?php
                       }
@@ -223,6 +240,7 @@ https://templatemo.com/tm-531-reflux
       </section>
       
         <!-- Experience -->
+
         <!-- work -->
       <section class="section my-services ss2" data-section="section2">
         <div class="container">
@@ -234,7 +252,7 @@ https://templatemo.com/tm-531-reflux
           <div class="mt-3 row">
             <?php
             $db=new DB("res_work_exp");
-            $rows=$db->all();
+            $rows=$db->all(['sh'=>1]);
             foreach($rows as $row){
             ?>
             <div class="col-md-6">
@@ -265,6 +283,7 @@ https://templatemo.com/tm-531-reflux
               }
             ?>
           </div> 
+
           <!-- education -->
           <div>
             <h3 class="e-h3">EDUCATION</h3>
@@ -294,8 +313,8 @@ https://templatemo.com/tm-531-reflux
                 <table class="tt2">
                   <tbody>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" ></i></td>
-                      <td><?=$row["edu_con"]?></td>
+                      <!-- <td><i class="fas fa-circle fa-1x" ></i></td> -->
+                      <td>-　<?=$row["edu_con"]?></td>
                       <!-- <td>Honorable mention of The 3th SAKURA Award</td> -->
                     </tr>
                   </tbody>
@@ -312,17 +331,15 @@ https://templatemo.com/tm-531-reflux
 <!-- 作品 -->
 <?php
   $db=new DB("res_portfolio");
-  $rows=$db->all();
+  $rows=$db->all(['sh'=>1]);
 ?>
       <section class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">
             <h2>PORTFOLIO</h2>
             <div class="line-dec"></div>
-            <span
-              ></span
-            >
-          </div>
+            <span></span>
+          </div> 
           <div class="row">
             <div class="isotope-wrapper">
               <form class="isotope-toolbar">
@@ -356,30 +373,36 @@ https://templatemo.com/tm-531-reflux
                     type="radio"
                     data-type="Others"
                     name="isotope-filter"
-                  />
-                  <span>Others</span></label
-                >
+                  /> 
+                  <span>Others</span></label>
               </form>
               <div class="isotope-box">
-                <div class="isotope-item" data-type="PHP">
+
+              <?php
+                foreach($rows as $row){
+              ?>
+                <div class="isotope-item" data-type="<?=$row['type'];?>">
                   <figure class="snip1321">
                     <img
-                      src="pic/calendar.png"
+                      src="pic/<?=$row['img'];?>"
                       alt="sq-sample26"
                     />
                     <figcaption>
                       <a
-                        href="pic/calendar.png"
+                        href="pic/<?=$row['img'];?>"
                         data-lightbox="image-1"
                         data-title="Caption"
                         ><i class="fa fa-search"></i
                       ></a>
-                      <h4>First Title</h4>
-                      <span>free to use our template</span>
+                      <h4><?=$row['title'];?></h4>
+                      <span><?=$row['point'];?></span>
                     </figcaption>
                   </figure>
                 </div>
-
+                <?php
+                  }
+                ?>
+<!-- 
                 <div class="isotope-item" data-type="JavaScript">
                   <figure class="snip1321">
                     <img
@@ -487,7 +510,7 @@ https://templatemo.com/tm-531-reflux
                       <span>Donec eget massa ante</span>
                     </figcaption>
                   </figure>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

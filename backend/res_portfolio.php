@@ -30,14 +30,14 @@
                     <td><textarea name="point[]" style='width:90%;height:60px'><?=$row['point'];?></textarea></td>
                     <td>
                         <?php
-                            $selectjs=($row['type']=="javascript")?"selected":"";
-                            $selectphp=($row['type']=="php")?"selected":"";
-                            $selectother=($row['type']=="others")?"selected":"";
+                            $selectjs=($row['type']=="JavaScript")?"selected":"";
+                            $selectphp=($row['type']=="PHP")?"selected":"";
+                            $selectother=($row['type']=="Others")?"selected":"";
                         ?>
                         <select name="type[]" class="form-control">
-                          <option name="javascript" value="javascript" <?=$selectjs;?>>JavaScript</option>
-                          <option name="php" value="php" <?=$selectphp;?>>PHP</option>
-                          <option name="others" value="others" <?=$selectother;?>>Others</option>
+                          <option name="JavaScript" value="JavaScript" <?=$selectjs;?>>JavaScript</option>
+                          <option name="PHP" value="PHP" <?=$selectphp;?>>PHP</option>
+                          <option name="Others" value="Others" <?=$selectother;?>>Others</option>
                         </select>
 
                         <!-- if() -->
