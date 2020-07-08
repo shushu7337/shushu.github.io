@@ -39,9 +39,9 @@ a:hover {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
-    color: #03738C;
+    color: #f2d505cc;
 }
 
 h4 {
@@ -51,7 +51,7 @@ h4 {
     letter-spacing: 0.25px;
 }
 h4.name{
-    color: #F2E205;
+    color: #f2d505cc;
     margin: 20px 0px;
     font-size: 40px;
 }
@@ -440,6 +440,7 @@ button:hover {
 }
 
 .service-item:hover {
+    
     background-color: rgba(39, 38, 38, 0.459);
 }
 
@@ -448,9 +449,11 @@ button:hover {
 }
 
 .service-item:hover p {
-    color: #4a4a4a;
+    color: ivory;
 }
-
+.service-item:hover td{
+    color: ivory;
+}
 
 
 
@@ -810,13 +813,13 @@ section.contact-me {
 .tt1{
     font-size: 20px;
     font-weight: 400;
-    color: #03738C;
+    color: #f2d505cc;
 }
 .tt2{
     margin-top: 20px;
     font-size: 20px;
     font-weight: 300;
-    color: #03738C;
+    color: #f2d505cc;
 }
 
 .bbx{
@@ -841,7 +844,7 @@ section.contact-me {
 }
 .section span{
     font-size: 20px;
-    color:#4C5D73;
+    color:#03738C;
 }
 .ss2 h4{
     width: auto;

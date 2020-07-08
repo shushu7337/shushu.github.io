@@ -566,42 +566,48 @@ https://templatemo.com/tm-531-reflux
                 </div> -->
       </section>
 <!-- 求職條件 -->
+<?php
+  $db=new DB("res_jsc");
+  $rows=$db->all(['sh'=>1]);
+?>
       <section class="section contact-me ss2" data-section="section4">
         <div class="container">
           <div class="section-heading">
-            <h2>Job search conditions</h2>
+            <h2>Job Search Conditions & Autobiography</h2>
             <div class="line-dec"></div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <h3 class="e-h3">工作職位</h3>
+            <div class="col-lg-6">
+              <h3 class="e-h3">求職條件</h3>
               <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <div class="h4 text-dark">職位</div>
-                <div class="">
-                  <span>
-                    全端/前端/後端網頁設計人員
-                  </span>
+              <?php
+                foreach($rows as $row){
+              ?>
+                <div class="h4 text-secondary"><?=$row['item'];?></div>
+                <div >
+                    <p class="font-sm">-　<?=$row['content'];?></p>
                 </div>
-                <div class="h4 text-dark">工作地點</div>
-                <div class="">
-                  <span>
-                    台北/新北/桃園
-                  </span>
+              <?php
+                }
+              ?>
+              </div>
+            </div>
+          
+            <div class="col-lg-6">
+              <h3 class="e-h3">自傳</h3>
+              <div class="service-item">
+              <?php
+                $db=new DB("res_intro");
+                $rows=$db->all(['sh'=>1]);
+                foreach($rows as $row){
+              ?>
+                <!-- <div class="h4 text-secondary"><?=$row['item'];?></div> -->
+                <div >
+                    <p class="font-sm">　　<?=$row['intro'];?></p>
                 </div>
-                <div class="h4 text-dark">工作性質</div>
-                <div class="">
-                  <span>
-                    全職
-                  </span>
-                </div>
-                <div class="h4 text-dark">期望薪資</div>
-                <div class="">
-                  <span>
-                    面議
-                  </span>
-                </div>
-                
+              <?php
+                }
+              ?>
               </div>
             </div>
           </div>

@@ -69,6 +69,8 @@ if(empty($_SESSION['login'])){
                 <li><a href="?do=res_work_exp">工作經歷管理</a></li>
                 <li><a href="?do=res_skills">技能管理</a></li>
                 <li><a href="?do=res_portfolio">作品集管理</a></li>
+                <li><a href="?do=res_jsc">求職條件管理</a></li>
+                <li><a href="?do=res_intro">自傳管理</a></li>
                 <li><a href="index.php">返回</a></li>
               </ul>
             </nav>

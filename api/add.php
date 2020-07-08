@@ -36,6 +36,17 @@ switch($table){
         $data['sh']=0;
     break;
     
+    case "res_jsc":
+        $data['item']=$_POST['item'];
+        $data['content']=$_POST['content'];
+        $data['sh']=0;
+    break;
+
+    case "res_intro":
+        $data['intro']=$_POST['intro'];
+        $data['sh']=0;
+    break;
+
     case "res_skills":
         $data['web']=$_POST['web'];
         $data['graphic']=$_POST['graphic'];

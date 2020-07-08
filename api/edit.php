@@ -40,6 +40,12 @@ foreach($_POST['id'] as $key=>$id){
                 $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
             
+            case "res_jsc":
+                $row['item']=$_POST['item'][$key];
+                $row['content']=$_POST['content'][$key];
+                $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+            break;
+
             case "res_portfolio":
                 if(!empty($_POST['img'])){
                     $row['img']=$_POST['img'][$key];
@@ -54,6 +60,11 @@ foreach($_POST['id'] as $key=>$id){
                 $row['web']=$_POST['web'][$key];
                 $row['graphic']=$_POST['graphic'][$key];
                 $row['others']=$_POST['others'][$key];
+                $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+            break;
+
+            case "res_intro":
+                $row['intro']=$_POST['intro'][$key];
                 $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
             
