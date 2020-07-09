@@ -19,11 +19,9 @@
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7b3164b4a9.js" crossorigin="anonymous"></script>
 
-    <title>SHU Zone</title>
-<!--
-Reflux Template
-https://templatemo.com/tm-531-reflux
--->
+    <!-- animate kit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
     <!-- JS -->
     <script src="assets/js/wow.js"></script>
     <!-- Bootstrap core CSS -->
@@ -35,6 +33,8 @@ https://templatemo.com/tm-531-reflux
     <link rel="stylesheet" href="assets/css/lightbox.css" />
     <!-- Animate -->
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+
+    <title>SHU Zone</title>
   </head>
 
   <body>
@@ -49,12 +49,11 @@ https://templatemo.com/tm-531-reflux
         <div id="menu" class="menu">
           <i class="fa fa-times" id="menu-close"></i>
           <div class="container" style="position:relative;">
-            <div class="t-image">
+            <div class="t-image  animate__animated animate__wobble">
               <a href="#"><img src="assets/images/LOGO-USING.png" alt="" /></a>
             </div>
             <div class="image">
               <a href="#">
-                
                 <img src="pic/<?=$profile['img'];?>" alt="" />
                 <!-- <img src="pic/me1.jpg" alt="" /> -->
               </a>
@@ -416,7 +415,7 @@ https://templatemo.com/tm-531-reflux
                         data-title="<?=$row['title'];?>">
                         <i class="fas fa-search"></i>
                       </a>
-                      <i class="fas fa-link"><a href=""></a></i>
+                      <a href="<?=$row['url'];?>"><i class="fas fa-link"></a></i>
                       <h4><?=$row['title'];?></h4>
                       <span><?=$row['point'];?></span>
                     </figcaption>
@@ -660,6 +659,10 @@ https://templatemo.com/tm-531-reflux
       $(window).scroll(function() {
         checkSection();
       });
+
+      // logo animate kit
+      // All animations will take twice the time to accomplish
+      document.documentElement.style.setProperty('--animate-duration', '2s');
     </script>
     </div>
   </body>
