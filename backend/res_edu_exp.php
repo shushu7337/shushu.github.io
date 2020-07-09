@@ -25,10 +25,10 @@
             
             <tbody>
                 <tr>
-                    <th scope="row"><input type="text" style="font-size:15px; padding:1px 0" name="edu_name[]" size="30" value="<?=$row['edu_name'];?>"></th>
-                    <td><input type="text" style="font-size:15px; padding:1px 0" name="edu_dept[]" size="25" value="<?=$row['edu_dept'];?>"></td>
-                    <td><input type="text" style="font-size:15px; padding:1px 0" name="edu_date[]" size="13" value="<?=$row['edu_date'];?>"></td>
-                    <td><textarea name="edu_con[]" style='width:90%;height:60px'><?=$row['edu_con'];?></textarea></td>
+                    <th scope="row"><input type="text" class="form-control" style="font-size:15px; padding:1px 0" name="edu_name[]" size="30" value="<?=$row['edu_name'];?>"></th>
+                    <td><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="edu_dept[]" size="25" value="<?=$row['edu_dept'];?>"></td>
+                    <td><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="edu_date[]" size="13" value="<?=$row['edu_date'];?>"></td>
+                    <td><textarea class="form-control" name="edu_con[]" style='width:90%;height:60px'><?=$row['edu_con'];?></textarea></td>
                     <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
                     <input type="hidden" name="table" value="<?=$table;?>">

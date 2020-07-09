@@ -9,7 +9,8 @@
                     <th scope="col">作品標題</th>
                     <th scope="col">作品說明</th>
                     <th scope="col">作品分類</th>
-                    <th scope="col">顯示</th>
+                    <th scope="col">作品網址</th>
+                    <th scope="col" >顯示</th>
                     <th scope="col" colspan="2">操作</th>
                 </tr>
             </thead>
@@ -25,26 +26,25 @@
             
             <tbody>
                 <tr>
-                    <th scope="row"><img src='pic/<?=$row['img'];?>' style="width:150px;height:100px"></th>
-                    <td><input type="text" name="title[]" size="5" value="<?=$row['title'];?>"></td>
-                    <td><textarea name="point[]" style='width:90%;height:60px'><?=$row['point'];?></textarea></td>
+                    <th scope="row"><img src='pic/<?=$row['img'];?>' style="width:100px;height:70px"></th>
+                    <td><input class="form-control" type="text" size="3" name="title[]" size="5" value="<?=$row['title'];?>"></td>
+                    <td><textarea class="form-control" name="point[]"  style='width:100%;height:80px'><?=$row['point'];?></textarea></td>
                     <td>
                         <?php
                             $selectjs=($row['type']=="JavaScript")?"selected":"";
                             $selectphp=($row['type']=="PHP")?"selected":"";
                             $selectother=($row['type']=="Others")?"selected":"";
                         ?>
-                        <select name="type[]" class="form-control">
+                        <select name="type[]"  class="form-control">
                           <option name="JavaScript" value="JavaScript" <?=$selectjs;?>>JavaScript</option>
                           <option name="PHP" value="PHP" <?=$selectphp;?>>PHP</option>
                           <option name="Others" value="Others" <?=$selectother;?>>Others</option>
                         </select>
-
-                        <!-- if() -->
                     </td>
+                    <td><input class="form-control" type="text" size="3" name="url[]" size="5" value="<?=$row['url'];?>"></td>
                     <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
-                    <td><input type="button" size="2"
+                    <td><input class="btn btn-outline-warning" type="button" size="2"
                         onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_img.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
                         value="更新"></td>
                     <input type="hidden" name="table" value="<?=$table;?>">

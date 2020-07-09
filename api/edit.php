@@ -43,6 +43,7 @@ foreach($_POST['id'] as $key=>$id){
             case "res_jsc":
                 $row['item']=$_POST['item'][$key];
                 $row['content']=$_POST['content'][$key];
+                $row['no']=$_POST['no'][$key];
                 $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
 
@@ -51,6 +52,7 @@ foreach($_POST['id'] as $key=>$id){
                     $row['img']=$_POST['img'][$key];
                 }
                 $row['title']=$_POST['title'][$key];
+                $row['url']=$_POST['url'][$key];
                 $row['point']=$_POST['point'][$key];
                 $row['type']=$_POST['type'][$key];
                 $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;

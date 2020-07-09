@@ -16,7 +16,7 @@
                     $table=$do;
                     $db=new DB($table);
                     // 撈出所有資料
-                    $rows=$db->all();
+                    $rows=$db->all([]," order by `no` ");
                     $num=$db->count();
                     // 用迴圈撈各筆
                     foreach($rows as $row){
@@ -25,19 +25,16 @@
             
             <tbody>
                 <tr>
-                    <th scope="row"><input type="text" style="font-size:15px; padding:1px 0" name="item[]" size="18" value="<?=$row['item'];?>"></th>
+                    <th scope="row"><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="item[]" size="5" value="<?=$row['item'];?>"></th>
                     <td><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="content[]" size="15" value="<?=$row['content'];?>"></td>
                     <td>
-                    <select class="form-control" name="no[]" id="exampleFormControlSelect1">
+                    <select class="form-control" name="no[]">
                         <?php
-
                             for($i=0; $i<=$num;$i++){
                 
                                 $no=($row['no']==$i)?'selected':'';
-                                echo "<option value='".$row['no']."' ".$no.">".$i."</option>";
-                                
+                                echo "<option value='".$i."' ".$no.">".$i."</option>";
                             }
-                            
                         ?>
                     </select>
                     </td>

@@ -25,6 +25,10 @@
         </td>
     </tr>
     <tr>
+        <td style="text-align:right">作品連結 : </td>
+        <td><input type="text" name="url"></td>
+    </tr>
+    <tr>
         <td style="text-align:right">作品說明 : </td>
         <td><textarea name="point" style='width:65%;height:60px'></textarea></td>
     </tr>

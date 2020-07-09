@@ -17,8 +17,8 @@
                     foreach($rows as $row){
                 ?>
                 <tr style="text-align: center;">
-                    <td><input type="text" name="acc[]" size="10" value="<?=$row['acc'];?>"></td>
-                    <td><input type="password" name="pw[]" size="10" value="<?=$row['pw'];?>"></td>
+                    <td><input class="form-control" type="text" name="acc[]" value="<?=$row['acc'];?>"></td>
+                    <td><input class="form-control" type="password" name="pw[]" value="<?=$row['pw'];?>"></td>
                     <td> <input type="checkbox" name="del[]" value="<?=$row['id'];?>">刪除</td>
                     <!-- 藏值 -->
                     <input type="hidden" name="table" value="<?=$table;?>">

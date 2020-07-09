@@ -31,9 +31,6 @@
                     <td><textarea name="ser_con[]" style='width:90%;height:60px'><?=$row['ser_con'];?></textarea></td>
                     <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
                     <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
-                    <td><input type="button" size="2"
-                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload_title.php?id=<?=$row['id'];?>&table=<?=$table;?>&#39;)"
-                        value="更新"></td>
                     <input type="hidden" name="table" value="<?=$table;?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                 </tr>

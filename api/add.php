@@ -39,6 +39,7 @@ switch($table){
     case "res_jsc":
         $data['item']=$_POST['item'];
         $data['content']=$_POST['content'];
+        $data['no']=$_POST['no'];
         $data['sh']=0;
     break;
 
@@ -56,6 +57,7 @@ switch($table){
     
     case "res_portfolio":
         $data["title"]=$_POST['title'];
+        $data["url"]=$_POST['url'];
         $data["point"]=$_POST['point'];
         $data["type"]=$_POST['type'];
         $data["sh"]=0;

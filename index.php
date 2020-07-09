@@ -48,7 +48,7 @@ https://templatemo.com/tm-531-reflux
             ?>
         <div id="menu" class="menu">
           <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
+          <div class="container" style="position:relative;">
             <div class="t-image">
               <a href="#"><img src="assets/images/LOGO-USING.png" alt="" /></a>
             </div>
@@ -66,8 +66,8 @@ https://templatemo.com/tm-531-reflux
             <h4 class="name"><?=$profile['name'];?></h4>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-                <li><a href="#section0">About</a></li>
-                <li><a href="#section1">Skills</a></li>
+                <li><a href="#section0"></a></li>
+                <li><a href="#section1">About</a></li>
                 <li><a href="#section2">Experience</a></li>
                 <li><a href="#section3">Portfolio</a></li>
                 <li><a href="#section4">Job search Conditions</a></li>
@@ -111,14 +111,16 @@ https://templatemo.com/tm-531-reflux
               <span>Copyright 2020 SHU Design</span>
               <?php
                 // 如果session是空的 就顯示登入，如果else顯示返回管理
-                    if(empty($_SESSION['login'])){  
+                    if(empty($_SESSION['login'])){
                 ?>
               <span class="login"><a href="front/login.php">LOGIN</a></span>
               <?php
                     }else{
                       ?>
-              <span class="login" onclick="location.replace(&#39;api/logout.php&#39;)" ><a href="#">Logout</a></span>
-              <span class="login"><a href="admin.php">Manage</a></span>
+                      <div>
+                        <span class="login" onclick="location.replace(&#39;api/logout.php&#39;)" ><a href="#">Logout</a></span>
+                        <span class="login"><a href="admin.php">Manage</a></span>
+                      </div>
               <?php
                     }
                 ?>
@@ -151,16 +153,37 @@ https://templatemo.com/tm-531-reflux
           </div>
         </section>
 
-
-        <!-- skill -->
+        <!-- Intro -->
       <section class="section section about-me" data-section="section1" >
         <div class="container">
           <div class="section-heading align-items-center">
-            <h2>SKILLS</h2>
+            <h2>About</h2>
             <div class="line-dec"></div>
           </div>
         </div>
-        <!-- square -->
+
+        <!-- Intro square-->
+        <h3 class="e-h3">Intro</h3>
+        <?php
+            $db=new DB("res_profile");
+            $rows=$db->all();
+            foreach($rows as $row){
+            ?>
+            <div class="col-md-12 justify-content-center align-items-center">
+                <div class="first-service-icon service-icon"></div>
+                <div><h4></h4></div>
+                <div class="">
+                  <span>
+                    <?=$row["intro"]?>
+                  </span>
+                </div>
+            </div>
+            <?php
+              }
+            ?>
+
+        <!-- Skills square -->
+        <h3 class="e-h3 mt-5">Skills</h3>
           <div class="row">
             <div class="col-lg-4 bbx">
               <div class="service-item">
@@ -245,10 +268,10 @@ https://templatemo.com/tm-531-reflux
       <section class="section my-services ss2" data-section="section2">
         <div class="container">
           <div class="section-heading">
-            <h2>EXPERIENCE</h2>
+            <h2>Experience</h2>
             <div class="line-dec"></div>
           </div>
-          <h3 class="e-h3">WORK EXPERIENCE</h3>
+          <h3 class="e-h3">Work Experience</h3>
           <div class="mt-3 row">
             <?php
             $db=new DB("res_work_exp");
@@ -286,7 +309,7 @@ https://templatemo.com/tm-531-reflux
 
           <!-- education -->
           <div>
-            <h3 class="e-h3">EDUCATION</h3>
+            <h3 class="e-h3">Education</h3>
              <div class="mt-3 col-xl-12">
               <?php
                   $db=new DB("res_edu_exp");
@@ -336,9 +359,8 @@ https://templatemo.com/tm-531-reflux
       <section class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">
-            <h2>PORTFOLIO</h2>
+            <h2>Portfolio</h2>
             <div class="line-dec"></div>
-            <span></span>
           </div> 
           <div class="row">
             <div class="isotope-wrapper">
@@ -381,7 +403,7 @@ https://templatemo.com/tm-531-reflux
               <?php
                 foreach($rows as $row){
               ?>
-                <div class="isotope-item" data-type="<?=$row['type'];?>">
+                <div class="isotope-item " data-type="<?=$row['type'];?>">
                   <figure class="snip1321">
                     <img
                       src="pic/<?=$row['img'];?>"
@@ -391,9 +413,10 @@ https://templatemo.com/tm-531-reflux
                       <a
                         href="pic/<?=$row['img'];?>"
                         data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                        data-title="<?=$row['title'];?>">
+                        <i class="fas fa-search"></i>
+                      </a>
+                      <i class="fas fa-link"><a href=""></a></i>
                       <h4><?=$row['title'];?></h4>
                       <span><?=$row['point'];?></span>
                     </figcaption>
@@ -402,120 +425,11 @@ https://templatemo.com/tm-531-reflux
                 <?php
                   }
                 ?>
-<!-- 
-                <div class="isotope-item" data-type="JavaScript">
-                  <figure class="snip1321">
-                    <img
-                      src="pic/countclock.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="pic/countclock.png"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Second Title</h4>
-                      <span>please tell your friends</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="JavaScript">
-                  <figure class="snip1321">
-                    <img
-                      src="pic/clock.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="pic/clock.png"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Second Title</h4>
-                      <span>please tell your friends</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="PHP">
-                  <figure class="snip1321">
-                    <img
-                      src="pic/invoice.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="pic/invoice.png"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Item Third</h4>
-                      <span>customize anything</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="Others">
-                  <figure class="snip1321">
-                    <img
-                      src="pic/table2.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="pic/table2.png"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Item Fourth</h4>
-                      <span>Re-distribution not allowed</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="Others">
-                  <figure class="snip1321">
-                    <img
-                      src="pic/all.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="pic/all.png"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Fifth Awesome</h4>
-                      <span>Ut sollicitudin risus</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="Others">
-                  <figure class="snip1321">
-                    <img
-                      src="pic/think.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a href="pic/think.png" data-lightbox="image-1" data-title="Caption"><i class="fa fa-search"></i></a>
-                      <h4>Awesome Sixth</h4>
-                      <span>Donec eget massa ante</span>
-                    </figcaption>
-                  </figure>
-                </div> -->
               </div>
             </div>
           </div>
         </div>
-                <!-- portfolio -->
+              
                 <!-- <div class="left-image-post">
                   <div class="row">
                     <div class="col-md-6">
@@ -527,11 +441,7 @@ https://templatemo.com/tm-531-reflux
                       <div class="right-text">
                         <h4>Reflux HTML CSS Template</h4>
                         <p>
-                          Donec tristique feugiat lacus, at sollicitudin nunc euismod
-                          sed. Mauris viverra, erat non sagittis gravida, elit dui
-                          mollis ante, sit amet eleifend purus ligula eget eros. Sed
-                          tincidunt quam vitae neque pharetra dignissim eget ut
-                          libero.
+                         
                         </p>
                         <div class="white-button">
                           <a href="#">Read More</a>
@@ -546,11 +456,7 @@ https://templatemo.com/tm-531-reflux
                       <div class="left-text">
                         <h4>Sed sagittis rhoncus velit</h4>
                         <p>
-                          Pellentesque habitant morbi tristique senectus et netus et
-                          malesuada fames ac turpis egestas. Vestibulum fermentum
-                          eleifend nibh, vitae sodales elit finibus pretium.
-                          Suspendisse potenti. Ut sollicitudin risus a sollicitudin
-                          semper.
+                         
                         </p>
                         <div class="white-button">
                           <a href="#">Read More</a>
@@ -568,7 +474,7 @@ https://templatemo.com/tm-531-reflux
 <!-- 求職條件 -->
 <?php
   $db=new DB("res_jsc");
-  $rows=$db->all(['sh'=>1]);
+  $rows=$db->all(['sh'=>1]," order by `no` ");
 ?>
       <section class="section contact-me ss2" data-section="section4">
         <div class="container">

@@ -22,9 +22,10 @@
             
             <tbody>
                 <tr>
-                    <th scope="row"><textarea name="intro[]" style='width:90%;height:60px'><?=$row['intro'];?></textarea></th>
-                    <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
-                    <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
+                    <th scope="row"><textarea class="form-control" name="intro[]" style='width:90%;height:60px'><?=$row['intro'];?></textarea></th>
+                    <td><input  type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
+                    <td><input  type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
+
                     <input type="hidden" name="table" value="<?=$table;?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                 </tr>
