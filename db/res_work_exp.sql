@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-07-07 05:38:41
+-- 產生時間： 2020-07-09 10:30:24
 -- 伺服器版本： 10.4.11-MariaDB
 -- PHP 版本： 7.4.3
 
@@ -43,7 +43,7 @@ CREATE TABLE `res_work_exp` (
 
 INSERT INTO `res_work_exp` (`id`, `ser_name`, `ser_date`, `ser_con`, `ser_title`, `sh`) VALUES
 (1, 'KD_科定企業股份有限公司 ', 'Jun.2016 - Nov.2019', '-　Product Reverse Engineering \r\n-　3D Drawing & Modleing \r\n-　4 Axis & 5 Axis  CNC Programmer and 　　　Operator \r\n-　Product Mass Production', 'PRODUCT DEVELOPER', 1),
-(2, '國鉅機械股份有限公司', ' Jul.2015-Mar.2016', '-　Welding and metal structure processing \r\n- Mechanical equipment assembly and 　maintenance ', 'MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN', 1);
+(2, '國鉅機械股份有限公司', ' Jul.2015-Mar.2016', '-　Welding and metal structure processing \r\n-　Mechanical equipment assembly and 　maintenance ', 'MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN', 1);
 
 --
 -- 已傾印資料表的索引
