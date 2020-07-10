@@ -486,10 +486,7 @@
                 </div> -->
       </section>
 <!-- 求職條件 -->
-<?php
-  $db=new DB("res_jsc");
-  $rows=$db->all(['sh'=>1]," order by `no` ");
-?>
+
       <section class="section contact-me ss2" data-section="section4">
         <div class="container">
           <div class="section-heading">
@@ -497,7 +494,28 @@
             <div class="line-dec"></div>
           </div>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
+              <h3 class="e-h3">自傳</h3>
+              <div class="service-item">
+                <?php
+                $db=new DB("res_intro");
+                $rows=$db->all(['sh'=>1]);
+                foreach($rows as $row){
+                  ?>
+                <!-- <div class="h4 text-secondary"><?=$row['item'];?></div> -->
+                <div >
+                  <p class="font-sm">　　<?=$row['intro'];?></p>
+                </div>
+                <?php
+                }
+                ?>
+              </div>
+            </div>
+            <?php
+              $db=new DB("res_jsc");
+              $rows=$db->all(['sh'=>1]," order by `no` ");
+            ?>
+            <div class="col-lg-12">
               <h3 class="e-h3">求職條件</h3>
               <div class="service-item">
               <?php
@@ -512,24 +530,7 @@
               ?>
               </div>
             </div>
-          
-            <div class="col-lg-6">
-              <h3 class="e-h3">自傳</h3>
-              <div class="service-item">
-              <?php
-                $db=new DB("res_intro");
-                $rows=$db->all(['sh'=>1]);
-                foreach($rows as $row){
-              ?>
-                <!-- <div class="h4 text-secondary"><?=$row['item'];?></div> -->
-                <div >
-                    <p class="font-sm">　　<?=$row['intro'];?></p>
-                </div>
-              <?php
-                }
-              ?>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
