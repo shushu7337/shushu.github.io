@@ -91,9 +91,7 @@
                   ></a>
                 </li>
                 <li>
-                  <a href="dreamsky1208@gmail.com"
-                    ><i class="far fa-envelope"></i></i
-                  ></a>
+                  <a href="mailto:dreamsky1208@gmail.com"><i class="far fa-envelope"></i></a>
                 </li>
                 <!-- <li>
                   <a href="#"><i class="fa fa-twitter"></i></a>
