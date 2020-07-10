@@ -76,17 +76,7 @@
                 <li><a href="#section4">Job search Conditions</a></li>
               </ul>
             </nav>
-            <!-- <div class="author-content">
-             
-              <span>Web Designer</span>
-              <span>
-                During working, I not only take my responsibility seriously but also keep
-                learning the different skills in case I have to use it in another day. <br>
-                Since the opportunity always favors the prepared mind.<br>
-                Therefore,I enjoy attempting to challenge and progress continuously.<br>
-                
-                I’m really looking forward to putting my skills to use in a challenging environment.</span>
-            </div> -->
+          
             <div class="social-network">
               <ul class="soial-icons">
                 <li>
@@ -171,8 +161,6 @@
             foreach($rows as $row){
             ?>
             <div class="col-md-12 justify-content-center align-items-center">
-                <div class="first-service-icon service-icon"></div>
-                <div><h4></h4></div>
                 <div class="">
                   <span>
                     <?=$row["intro"]?>
@@ -199,10 +187,20 @@
                     foreach($rows as $row){
                   ?>
                     <tr>
+                      <?php
+                        if(!empty($row['web'])){
+                      ?>
                       <td>
                         <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
                         -　<?=$row['web'];?>
                       </td>
+                      <?php
+                        }else{
+                      ?>
+                      <td></td>
+                      <?php
+                        }
+                        ?>
                     </tr>
                     <?php
                       }
@@ -223,10 +221,20 @@
                       foreach($rows as $row){
                     ?>
                     <tr>
+                    <?php
+                        if(!empty($row['graphic'])){
+                      ?>
                       <td>
                         <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
                         -　<?=$row['graphic'];?>
                       </td>
+                      <?php
+                        }else{
+                      ?>
+                      <td></td>
+                      <?php
+                        }
+                        ?>
                     </tr>
                     <?php
                       }
@@ -248,10 +256,20 @@
                       foreach($rows as $row){
                     ?>
                     <tr>
+                    <?php
+                        if(!empty($row['others'])){
+                      ?>
                       <td>
                         <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
                         -　<?=$row['others'];?>
                       </td>
+                      <?php
+                        }else{
+                      ?>
+                      <td></td>
+                      <?php
+                        }
+                        ?>
                     </tr>
                     <?php
                       }
@@ -266,7 +284,7 @@
         <!-- Experience -->
 
         <!-- work -->
-      <section class="section my-services ss2" data-section="section2">
+        <section class="section my-services ss2" data-section="section2">
         <div class="container">
           <div class="section-heading">
             <h2>Experience</h2>
@@ -311,44 +329,39 @@
           <!-- education -->
           <div>
             <h3 class="e-h3">Education</h3>
-             <div class="mt-3 col-xl-12">
               <?php
                   $db=new DB("res_edu_exp");
-                  $rows=$db->all();
+                  $rows=$db->all(['sh'=>1]);
                   foreach($rows as $row){
               ?>
+            <div class="mt-3 col-xl-12">
               <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <div><h4><?=$row["edu_name"]?></h4></div>
-                <!-- <div><h4>NATIONAL CHIAYI UNIVERSITY</h4></div> -->
-                <span>
-                <?=$row["edu_dept"]?>
-                </span>
-                <!-- <span>
-                  Department of Wood Based Materials and Design
-                </span> -->
-                <span>|</span>
-                <span>
-                  <?=$row["edu_date"]?>
-                </span>
-                <!-- <span>
-                  Set.2011-Jun.2015
-                </span> -->
-                <table class="tt2">
-                  <tbody>
-                    <tr>
-                      <!-- <td><i class="fas fa-circle fa-1x" ></i></td> -->
-                      <td>-　<?=$row["edu_con"]?></td>
-                      <!-- <td>Honorable mention of The 3th SAKURA Award</td> -->
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  <div><h4><?=$row["edu_name"]?></h4></div>
+                  <!-- <div><h4>NATIONAL CHIAYI UNIVERSITY</h4></div> -->
+                  <span><?=$row["edu_dept"]?></span>
+                  <!-- <span>
+                    Department of Wood Based Materials and Design
+                  </span> -->
+                  <span>|</span>
+                  <span><?=$row["edu_date"]?></span>
+                  <!-- <span>
+                    Set.2011-Jun.2015
+                  </span> -->
+                  <table class="tt2">
+                    <tbody>
+                      <tr>
+                        <!-- <td><i class="fas fa-circle fa-1x" ></i></td> -->
+                        <td>-　<?=$row["edu_con"]?></td>
+                        <!-- <td>Honorable mention of The 3th SAKURA Award</td> -->
+                      </tr>
+                    </tbody>
+                  </table>
               </div>
             </div>
             <?php
-              }
+            }
             ?>
+          </div>
         </div>
       </section>
 
