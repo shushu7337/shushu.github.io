@@ -11,52 +11,50 @@ body {
   overflow: hidden;
   background:#0D0D0D;
 }
-input {
-  ::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
      color: rgba(255,255,255,0.7);
   }
-  ::-moz-placeholder {
+input::-moz-placeholder {
      color: rgba(255,255,255,0.7);  
   }
-  :-ms-input-placeholder {  
+input:-ms-input-placeholder {  
      color: rgba(255,255,255,0.7);  
   }
-  &:focus {
+  input:focus{
     outline: 0 transparent solid;
-    ::-webkit-input-placeholder {
+  }
+  input:focus::-webkit-input-placeholder {
      color: rgba(0,0,0,0.7);
     }
-    ::-moz-placeholder {
+    input:focus::-moz-placeholder {
        color: rgba(0,0,0,0.7);  
     }
-    :-ms-input-placeholder {  
+    input:focus:-ms-input-placeholder {  
        color: rgba(0,0,0,0.7);  
     }
-  }
-}
 
 .login-form {
-  //background: #222;
-  //box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  /* background: #222; */
+  /* box-shadow: 0 0 1rem rgba(0,0,0,0.3); */
   min-height: 10rem;
   margin: auto;
   max-width: 50%;
   padding: .5rem;
 }
 .login-text {
-  //background: hsl(40,30,60);
-  //border-bottom: .5rem solid white;
+  /* background: hsl(40,30,60); */
+  /* border-bottom: .5rem solid white; */
   color: white;
   font-size: 1.5rem;
   margin: 0 auto;
   max-width: 50%;
   padding: .5rem;
   text-align: center;
-  //text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
-  .fa-stack-1x {
-    color: black;
-  }
+  /* text-shadow: 1px -1px 0 rgba(0,0,0,0.3); */
 }
+.login-text.fa-stack-1x {
+      color: black;
+    }
 
 .login-username, .login-password {
   background: transparent;
@@ -68,15 +66,15 @@ input {
   padding: .5rem;
   transition: 250ms background ease-in;
   width: calc(100% - 3rem);
-  &:focus {
-    background: white;
-    color: black;
-    transition: 250ms background ease-in;
-  }
 }
+.login-username, .login-password:focus {
+      background: white;
+      color: black;
+      transition: 250ms background ease-in;
+    }
 
 .login-forgot-pass {
-  //border-bottom: 1px solid white;
+  /* //border-bottom: 1px solid white; */
   bottom: 0;
   color: white;
   cursor: pointer;
@@ -87,12 +85,12 @@ input {
   padding: .5rem;
   position: absolute;
   text-align: center;
-  //text-decoration: none;
+  /* //text-decoration: none; */
   width: 100%;
-  &:hover {
-    opacity: 1;
-  }
 }
+.login-forgot-pass:hover {
+      opacity: 1;
+    }
 .login-submit {
   border: 1px solid white;
   background: transparent;
@@ -102,12 +100,12 @@ input {
   min-width: 1px;
   padding: .25rem;
   transition: 250ms background ease-in;
-  &:hover, &:focus {
-    background: white;
-    color: black;
-    transition: 250ms background ease-in;
-  }
 }
+.login-submit:hover, .login-submit:focus {
+      background: white;
+      color: black;
+      transition: 250ms background ease-in;
+    }
 
 
 
