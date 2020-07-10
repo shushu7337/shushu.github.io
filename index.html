@@ -1,4 +1,4 @@
-<?php include_once "base.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,10 +20,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7b3164b4a9.js" crossorigin="anonymous"></script>
-
     <!-- animate kit -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
+    <title>SHU Zone</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
     <!-- JS -->
     <script src="assets/js/wow.js"></script>
     <!-- Bootstrap core CSS -->
@@ -35,10 +39,6 @@
     <link rel="stylesheet" href="assets/css/lightbox.css" />
     <!-- Animate -->
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
-    <!-- Magic Animate CSS Files -->
-    <link rel="stylesheet" href="assets/css/magic.min.css">
-
-    <title>SHU Zone</title>
   </head>
 
   <body>
@@ -46,75 +46,58 @@
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
         <i class="fa fa-bars" id="menu-toggle"></i>
-        <?php 
-              $total=new DB('res_profile');
-              $profile=$total->find(1);
-            ?>
         <div id="menu" class="menu">
           <i class="fa fa-times" id="menu-close"></i>
-          <div class="container" style="position:relative;">
-            <div class="t-image  animate__animated animate__wobble">
+          <div class="container">
+            <div class="t-image">
               <a href="#"><img src="assets/images/LOGO-USING.png" alt="" /></a>
             </div>
             <div class="image">
-              <a href="#">
-                <img src="pic/<?=$profile['img'];?>" alt="" />
-                <!-- <img src="pic/me1.jpg" alt="" /> -->
-              </a>
+              <a href="#"><img src="pic/me1.jpg" alt="" /></a>
             </div>
-            <?php 
-              $total=new DB('res_profile');
-              $profile=$total->find(1);
-            ?>
-            <h4 class="name"><?=$profile['name'];?></h4>
+            <h4 class="name">SHU HAO CHANG</h4>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-                <li><a href="#section0"></a></li>
-                <li><a href="#section1">About</a></li>
+                <li><a href="#section0">About</a></li>
+                <li><a href="#section1">Skills</a></li>
                 <li><a href="#section2">Experience</a></li>
                 <li><a href="#section3">Portfolio</a></li>
                 <li><a href="#section4">Job search Conditions</a></li>
               </ul>
             </nav>
-          
+            <!-- <div class="author-content">
+             
+              <span>Web Designer</span>
+              <span>
+                During working, I not only take my responsibility seriously but also keep
+                learning the different skills in case I have to use it in another day. <br>
+                Since the opportunity always favors the prepared mind.<br>
+                Therefore,I enjoy attempting to challenge and progress continuously.<br>
+                
+                I’m really looking forward to putting my skills to use in a challenging environment.</span>
+            </div> -->
             <div class="social-network">
               <ul class="soial-icons">
                 <li>
-                  <a href="#"
+                  <a href=""
                     ><i class="fa fa-facebook"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="mailto:dreamsky1208@gmail.com"><i class="far fa-envelope"></i></a>
-                </li>
-                <!-- <li>
                   <a href="#"><i class="fa fa-twitter"></i></a>
-                </li> -->
-                <!-- <li>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                </li> -->
+                </li>
                 <li>
-                  <a href="https://github.com/shushu7337"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul>
             </div>
             <div class="copyright-text">
               <span>Copyright 2020 SHU Design</span>
-              <?php
-                // 如果session是空的 就顯示登入，如果else顯示返回管理
-                    if(empty($_SESSION['login'])){
-                ?>
-              <span class="login"><a href="front/login.php">LOGIN</a></span>
-              <?php
-                    }else{
-                      ?>
-                      <div>
-                        <span class="login" onclick="location.replace(&#39;api/logout.php&#39;)" ><a href="#">Logout</a></span>
-                        <span class="login"><a href="admin.php">Manage</a></span>
-                      </div>
-              <?php
-                    }
-                ?>
+             
+              <span class="login"><a href="login.html">LOGIN</a></span>
+            
+            
+             
             </div>
           </div>
         </div>
@@ -126,7 +109,7 @@
               <div class="row">
                 <div class="col-md-12 col-sm-12 text-center">
                   <div class="contents">
-                    <img src="assets/images/LOGO-USINGT.png" class="wow fadeInUp animated" style=" animation-delay:0.1s; margin-bottom:100px;" alt="" />
+                    <img src="assets/images/LOGO-USINGT.png" class="wow fadeInUp animated" style=" animation-delay:0.1s;" alt="" />
                     <h1 class="wow fadeInUp animated set1" style="animation-delay:0.3s">
                       Hi This is
                     </h1>
@@ -144,101 +127,61 @@
           </div>
         </section>
 
-        <!-- Intro -->
+
+        <!-- skill -->
       <section class="section section about-me" data-section="section1" >
         <div class="container">
           <div class="section-heading align-items-center">
-            <h2>About</h2>
+            <h2>SKILLS</h2>
             <div class="line-dec"></div>
           </div>
         </div>
-
-        <!-- Intro square-->
-        <h3 class="e-h3">Intro</h3>
-        <?php
-            $db=new DB("res_profile");
-            $rows=$db->all();
-            foreach($rows as $row){
-            ?>
-            <div class="col-md-12 justify-content-center align-items-center">
-                <div class="">
-                  <span>
-                    <?=$row["intro"]?>
-                  </span>
-                </div>
-            </div>
-            <?php
-              }
-            ?>
-
-        <!-- Skills square -->
-        <h3 class="e-h3 mt-5">Skills</h3>
+        <!-- square -->
           <div class="row">
-            <div class="col-lg-4 bbx">
+            <div class="col-md-4 bbx">
               <div class="service-item">
                 <i class="fas fa-laptop fa-4x fass"></i>
                 <div class=" service-icon"></div>
                 <h4>Web Programming</h4>
                 <table class="tt1">
                   <tbody>
-                  <?php
-                    $db=new DB("res_skills");
-                    $rows=$db->all();
-                    foreach($rows as $row){
-                  ?>
                     <tr>
-                      <?php
-                        if(!empty($row['web'])){
-                      ?>
-                      <td>
-                        <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
-                        -　<?=$row['web'];?>
-                      </td>
-                      <?php
-                        }else{
-                      ?>
-                      <td></td>
-                      <?php
-                        }
-                        ?>
+                      <td>-　JavaScript</td>
                     </tr>
-                    <?php
-                      }
-                    ?>
+                    <tr>
+                      <td>-　CSS/HTML5</td>
+                    </tr>
+                    <tr>
+                      <td>-　Bootstrap</td>
+                    </tr>
+                    <tr>
+                      <td>-　PHP</td>
+                    </tr>
+                    <tr>
+                      <td>-　MySQL/MariaDB</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="col-lg-4 bbx">
+            <div class="col-md-4 bbx">
               <div class="service-item">
                 <i class="fas fa-paint-brush fa-4x fass"></i>
                 <h4>Graphic Design</h4>
                 <table class="tt1">
                   <tbody>
-                  <?php
-                      $db=new DB("res_skills");
-                      $rows=$db->all();
-                      foreach($rows as $row){
-                    ?>
                     <tr>
-                    <?php
-                        if(!empty($row['graphic'])){
-                      ?>
-                      <td>
-                        <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
-                        -　<?=$row['graphic'];?>
-                      </td>
-                      <?php
-                        }else{
-                      ?>
-                      <td></td>
-                      <?php
-                        }
-                        ?>
+                      <td>-　Adobe Photoshop</td>
                     </tr>
-                    <?php
-                      }
-                    ?>
+                    <tr>
+                      <td>-　Adobe Illustrator</td>
+                    </tr>
+                    <tr>
+                      <td>-　Zbrush</td>
+                    </tr>
+                    <tr>
+                      <td>-　3ds Max</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -250,132 +193,137 @@
                 <h4>Others</h4>
                 <table class="tt1">
                   <tbody>
-                  <?php
-                      $db=new DB("res_skills");
-                      $rows=$db->all();
-                      foreach($rows as $row){
-                    ?>
                     <tr>
-                    <?php
-                        if(!empty($row['others'])){
-                      ?>
-                      <td>
-                        <!-- <i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i> -->
-                        -　<?=$row['others'];?>
-                      </td>
-                      <?php
-                        }else{
-                      ?>
-                      <td></td>
-                      <?php
-                        }
-                        ?>
+                      <td>-　Git</td>
                     </tr>
-                    <?php
-                      }
-                    ?>
+                    <tr>
+                      <td>-　Github</td>
+                    </tr>
+                    <tr>
+                      <td>-　AlphaCam</td>
+                    </tr>
+                    <tr>
+                      <td>-　SolidWorks</td>
+                    </tr>
+                    <tr>
+                      <td>-　AutoCad</td>
+                    </tr>
                   </tbody>
                   </table> 
               </div>
             </div>
           </div>
       </section>
-      
         <!-- Experience -->
-
-        <!-- work -->
-        <section class="section my-services ss2" data-section="section2">
+      <section class="section my-services ss2" data-section="section2">
         <div class="container">
           <div class="section-heading">
-            <h2>Experience</h2>
+            <h2>EXPERIENCE</h2>
             <div class="line-dec"></div>
           </div>
-          <h3 class="e-h3">Work Experience</h3>
-          <div class="mt-3 row">
-            <?php
-            $db=new DB("res_work_exp");
-            $rows=$db->all(['sh'=>1]);
-            foreach($rows as $row){
-            ?>
+          <h3 class="e-h3">WORK EXPERIENCE</h3>
+          <div class="row">
             <div class="col-md-12">
               <div class="service-item">
                 <div class="first-service-icon service-icon"></div>
-                <div><h4><?=$row["ser_title"]?></h4></div>
-                <!-- <div><h4>PRODUCT DEVELOPER</h4></div> -->
+                <div><h4>PRODUCT DEVELOPER</h4></div>
                 <div class="sss2">
                   <span>
-                    <?=$row["ser_name"]?>
-                  </span>
-                  <!-- <span>
                     KD_科定企業股份有限公司
-                  </span> -->
+                  </span>
                     <span>|</span>
                     <span>
-                      <?=$row["ser_date"]?>
-                    </span>
-                    <!-- <span>
                     Jun.2016 - Nov.2019
-                    </span> -->
+                    </span>
                 </div>
-                <div class="tt2"><?=nl2br($row["ser_con"]);?></div>
+                <table class="tt2">
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>Product Reverse Engineering </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>3D Drawing & Modeling </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>4 Axis & 5 Axis CNC Programmer and Operator </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>Product Mass Production</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-
-            <?php
-              }
-            ?>
-          </div> 
-
-          <!-- education -->
-          <div>
-            <h3 class="e-h3">Education</h3>
-              <?php
-                  $db=new DB("res_edu_exp");
-                  $rows=$db->all(['sh'=>1]);
-                  foreach($rows as $row){
-              ?>
-            <div class="mt-3 col-xl-12">
+            <div class="col-md-12">
               <div class="service-item">
-                  <div><h4><?=$row["edu_name"]?></h4></div>
-                  <!-- <div><h4>NATIONAL CHIAYI UNIVERSITY</h4></div> -->
-                  <span><?=$row["edu_dept"]?></span>
-                  <!-- <span>
-                    Department of Wood Based Materials and Design
-                  </span> -->
-                  <span>|</span>
-                  <span><?=$row["edu_date"]?></span>
-                  <!-- <span>
-                    Set.2011-Jun.2015
-                  </span> -->
-                  <table class="tt2">
-                    <tbody>
-                      <tr>
-                        <!-- <td><i class="fas fa-circle fa-1x" ></i></td> -->
-                        <td>-　<?=$row["edu_con"]?></td>
-                        <!-- <td>Honorable mention of The 3th SAKURA Award</td> -->
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="second-service-icon service-icon"></div>
+                <div><h4>MECHANICAL EQUIPMENT MANUFACTURING TECHNICIAN</h4></div>
+                  <div class="sss2">
+                   <span>
+                      國鉅機械股份有限公司  
+                    </span>
+                      <span>|</span>
+                    <span>
+                      Jul.2015-Mar.2016
+                    </span>
+                  </div>
+                <table class="tt2">
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>Welding and metal structure processing </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>Mechanical equipment assembly and maintenance </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <?php
-            }
-            ?>
           </div>
+          <div>
+            <h3 class="e-h3">EDUCATION</h3>
+             <div class="col-md-12">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <div><h4>NATIONAL CHIAYI UNIVERSITY</h4></div>
+                <span>
+                  Department of Wood Based Materials and Design
+                </span>
+                <span>|</span>
+                <span>
+                  Set.2011-Jun.2015
+                </span>
+                <table class="tt2">
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-circle fa-1x" ></i></td>
+                      <td>Honorable mention of The 3th SAKURA Award</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            </div>
         </div>
       </section>
 
 <!-- 作品 -->
-<?php
-  $db=new DB("res_portfolio");
-  $rows=$db->all(['sh'=>1]);
-?>
       <section class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">
-            <h2>Portfolio</h2>
+            <h2>PORTFOLIO</h2>
             <div class="line-dec"></div>
-          </div> 
+            <span
+              ></span
+            >
+          </div>
           <div class="row">
             <div class="isotope-wrapper">
               <form class="isotope-toolbar">
@@ -409,125 +357,181 @@
                     type="radio"
                     data-type="Others"
                     name="isotope-filter"
-                  /> 
-                  <span>Others</span></label>
+                  />
+                  <span>Others</span></label
+                >
               </form>
               <div class="isotope-box">
-
-              <?php
-                foreach($rows as $row){
-              ?>
-                <div class="isotope-item " data-type="<?=$row['type'];?>">
+                <div class="isotope-item" data-type="PHP">
                   <figure class="snip1321">
                     <img
-                      src="pic/<?=$row['img'];?>"
+                      src="pic/calendar.png"
                       alt="sq-sample26"
                     />
                     <figcaption>
                       <a
-                        href="pic/<?=$row['img'];?>"
+                        href="pic/calendar.png"
                         data-lightbox="image-1"
-                        data-title="<?=$row['title'];?>">
-                        <i class="fas fa-search"></i>
-                      </a>
-                      <a href="<?=$row['url'];?>"><i class="fas fa-link"></a></i>
-                      <h4><?=$row['title'];?></h4>
-                      <span><?=$row['point'];?></span>
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>First Title</h4>
+                      <span>free to use our template</span>
                     </figcaption>
                   </figure>
                 </div>
-                <?php
-                  }
-                ?>
+
+                <div class="isotope-item" data-type="JavaScript">
+                  <figure class="snip1321">
+                    <img
+                      src="pic/countclock.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="pic/countclock.png"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Second Title</h4>
+                      <span>please tell your friends</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="JavaScript">
+                  <figure class="snip1321">
+                    <img
+                      src="pic/clock.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="pic/clock.png"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Second Title</h4>
+                      <span>please tell your friends</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="PHP">
+                  <figure class="snip1321">
+                    <img
+                      src="pic/invoice.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="pic/invoice.png"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Third</h4>
+                      <span>customize anything</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="Others">
+                  <figure class="snip1321">
+                    <img
+                      src="pic/table2.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="pic/table2.png"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Fourth</h4>
+                      <span>Re-distribution not allowed</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="Others">
+                  <figure class="snip1321">
+                    <img
+                      src="pic/all.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="pic/all.png"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Fifth Awesome</h4>
+                      <span>Ut sollicitudin risus</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="Others">
+                  <figure class="snip1321">
+                    <img
+                      src="pic/think.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a href="pic/think.png" data-lightbox="image-1" data-title="Caption"><i class="fa fa-search"></i></a>
+                      <h4>Awesome Sixth</h4>
+                      <span>Donec eget massa ante</span>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
         </div>
-              
-                <!-- <div class="left-image-post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="left-image">
-                        <img src="assets/images/left-image.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="right-text">
-                        <h4>Reflux HTML CSS Template</h4>
-                        <p>
-                         
-                        </p>
-                        <div class="white-button">
-                          <a href="#">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="right-image-post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="left-text">
-                        <h4>Sed sagittis rhoncus velit</h4>
-                        <p>
-                         
-                        </p>
-                        <div class="white-button">
-                          <a href="#">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="right-image">
-                        <img src="assets/images/right-image.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
+               
       </section>
 <!-- 求職條件 -->
-<?php
-  $db=new DB("res_jsc");
-  $rows=$db->all(['sh'=>1]," order by `no` ");
-?>
       <section class="section contact-me ss2" data-section="section4">
         <div class="container">
           <div class="section-heading">
-            <h2>Job Search Conditions & Autobiography</h2>
+            <h2>Job search conditions</h2>
             <div class="line-dec"></div>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <h3 class="e-h3">求職條件</h3>
+            <div class="col-md-6">
+              <h3 class="e-h3">工作職位</h3>
               <div class="service-item">
-              <?php
-                foreach($rows as $row){
-              ?>
-                <div class="h4 text-secondary"><?=$row['item'];?></div>
-                <div >
-                    <p class="font-sm">-　<?=$row['content'];?></p>
+                <div class="first-service-icon service-icon"></div>
+                <div class="h4 text-dark">職位</div>
+                <div class="">
+                  <span>
+                    全端/前端/後端網頁設計人員
+                  </span>
                 </div>
-              <?php
-                }
-              ?>
-              </div>
-            </div>
-          
-            <div class="col-lg-6">
-              <h3 class="e-h3">自傳</h3>
-              <div class="service-item">
-              <?php
-                $db=new DB("res_intro");
-                $rows=$db->all(['sh'=>1]);
-                foreach($rows as $row){
-              ?>
-                <!-- <div class="h4 text-secondary"><?=$row['item'];?></div> -->
-                <div >
-                    <p class="font-sm">　　<?=$row['intro'];?></p>
+                <div class="h4 text-dark">工作地點</div>
+                <div class="">
+                  <span>
+                    台北/新北/桃園
+                  </span>
                 </div>
-              <?php
-                }
-              ?>
+                <div class="h4 text-dark">工作性質</div>
+                <div class="">
+                  <span>
+                    全職
+                  </span>
+                </div>
+                <div class="h4 text-dark">期望薪資</div>
+                <div class="">
+                  <span>
+                    面議
+                  </span>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -674,7 +678,6 @@
       $(window).scroll(function() {
         checkSection();
       });
-
       // logo animate kit
       // All animations will take twice the time to accomplish
       document.documentElement.style.setProperty('--animate-duration', '2s');
