@@ -905,7 +905,7 @@ section.contact-me {
       margin-top: 10px;
       font-size: 3em;
       background:linear-gradient(160deg,#fcff46,#ff9800c2);
-      background-clip: text;
+      -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Rock Salt', cursive;
   }
