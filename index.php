@@ -91,9 +91,8 @@
                   ></a>
                 </li>
                 <li>
-                  <a href="dreamsky1208@gmail.com"
-                    ><i class="far fa-envelope"></i></i
-                  ></a>
+                <!-- <input type="button" value="按鈕文字" onclick="self.location.href='mailto:欲寄往的E-mail網址'> -->
+                  <a href="mailto:dreamsky1208@gmail.com"><i class="far fa-envelope"></i></a>
                 </li>
                 <!-- <li>
                   <a href="#"><i class="fa fa-twitter"></i></a>
