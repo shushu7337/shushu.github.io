@@ -27,8 +27,8 @@
                     <th scope="row"><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="web[]" size="18" value="<?=$row['web'];?>"></th>
                     <td><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="graphic[]" size="15" value="<?=$row['graphic'];?>"></td>
                     <td><input class="form-control" type="text" style="font-size:15px; padding:1px 0" name="others[]" size="13" value="<?=$row['others'];?>"></td>
-                    <td><input class="form-control" type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
-                    <td><input class="form-control" type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
+                    <td><input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$isChk;?>></td>
+                    <td><input type="checkbox" name="del[]" size="2" value="<?=$row['id'];?>">刪除</td>
                     <input type="hidden" name="table" value="<?=$table;?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                 </tr>

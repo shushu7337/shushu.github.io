@@ -904,9 +904,8 @@ section.contact-me {
   .set1{
       margin-top: 10px;
       font-size: 3em;
-      /* color: #F2B705; */
       background:linear-gradient(160deg,#fcff46,#ff9800c2);
-      -webkit-background-clip: text;
+      background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Rock Salt', cursive;
   }
