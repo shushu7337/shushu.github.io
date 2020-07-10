@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="assets/css/lightbox.css" />
     <!-- Animate -->
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+    <!-- Magic Animate CSS Files -->
+    <link rel="stylesheet" href="assets/css/magic.min.css">
 
     <title>SHU Zone</title>
   </head>
@@ -661,6 +663,24 @@
       // logo animate kit
       // All animations will take twice the time to accomplish
       document.documentElement.style.setProperty('--animate-duration', '2s');
+
+      // Magic animate kit
+      $('.service-item').hover(function () {
+        $(this).addClass('magictime vanishIn');
+      });
+
+      setTimeout(function(){
+        $('.image').addClass('magictime vanishIn');
+      }, 100);
+      setTimeout(function(){
+        $('.fa').addClass('magictime tinRightIn');
+      }, 100);
+      setTimeout(function(){
+        $('.far').addClass('magictime tinRightIn');
+      }, 100);
+      setTimeout(function(){
+        $('.fab').addClass('magictime tinRightIn');
+      }, 100);
     </script>
     </div>
   </body>
