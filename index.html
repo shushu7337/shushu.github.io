@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7b3164b4a9.js" crossorigin="anonymous"></script>
+    <!-- animate kit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
     <title>SHU Zone</title>
 <!--
@@ -144,19 +146,19 @@ https://templatemo.com/tm-531-reflux
                 <table class="tt1">
                   <tbody>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>JavaScript</td>
+                      <td>-　JavaScript</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>CSS/HTML5</td>
+                      <td>-　CSS/HTML5</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Bootstrap</td>
+                      <td>-　Bootstrap</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>PHP</td>
+                      <td>-　PHP</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>MySQL/MariaDB</td>
+                      <td>-　MySQL/MariaDB</td>
                     </tr>
                   </tbody>
                 </table>
@@ -169,16 +171,16 @@ https://templatemo.com/tm-531-reflux
                 <table class="tt1">
                   <tbody>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Adobe Photoshop</td>
+                      <td>-　Adobe Photoshop</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Adobe Illustrator</td>
+                      <td>-　Adobe Illustrator</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Zbrush</td>
+                      <td>-　Zbrush</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>3ds Max</td>
+                      <td>-　3ds Max</td>
                     </tr>
                   </tbody>
                 </table>
@@ -192,19 +194,19 @@ https://templatemo.com/tm-531-reflux
                 <table class="tt1">
                   <tbody>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Git</td>
+                      <td>-　Git</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>Github</td>
+                      <td>-　Github</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>AlphaCam</td>
+                      <td>-　AlphaCam</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>SolidWorks</td>
+                      <td>-　SolidWorks</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-circle fa-1x" style="padding-left:20px;margin-right:10px;"></i>AutoCad</td>
+                      <td>-　AutoCad</td>
                     </tr>
                   </tbody>
                   </table> 
@@ -724,6 +726,27 @@ https://templatemo.com/tm-531-reflux
       $(window).scroll(function() {
         checkSection();
       });
+      // logo animate kit
+      // All animations will take twice the time to accomplish
+      document.documentElement.style.setProperty('--animate-duration', '2s');
+
+      // Magic animate kit
+      $('.service-item').hover(function () {
+        $(this).addClass('magictime vanishIn');
+      });
+
+      setTimeout(function(){
+        $('.image').addClass('magictime vanishIn');
+      }, 100);
+      setTimeout(function(){
+        $('.fa').addClass('magictime tinRightIn');
+      }, 100);
+      setTimeout(function(){
+        $('.far').addClass('magictime tinRightIn');
+      }, 100);
+      setTimeout(function(){
+        $('.fab').addClass('magictime tinRightIn');
+      }, 100);
     </script>
     </div>
   </body>
