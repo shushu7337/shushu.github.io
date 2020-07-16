@@ -904,6 +904,10 @@ section.contact-me {
   .set1{
       margin-top: 10px;
       font-size: 3em;
+<<<<<<< HEAD
+=======
+      /* color: #F2B705; */
+>>>>>>> ver2
       background:linear-gradient(160deg,#fcff46,#ff9800c2);
       -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
