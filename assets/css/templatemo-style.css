@@ -6,7 +6,6 @@ body {
 }
 
 #page-wraper {
-    /* background: url(../images/page-bg.jpg) no-repeat center center fixed; */
     background: linear-gradient(to right bottom, #607D8B, #0c1320,#0c1320);
     background-size: cover;
     width: 100%;
@@ -523,18 +522,12 @@ section.my-work .section-heading {
     background: #f7f7f7;
 }
 
-/* .lazyloading {
-    background: #f7f7f7 url(//afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
-    min-height: 60px;
-} */
 
 figure.snip1321 {
   overflow: hidden;
   text-align: center;
   -webkit-perspective: 50em;
   perspective: 50em;
-  /* width: 400px;
-  height: 250px; */
 }
 figure.snip1321 * {
   -webkit-box-sizing: padding-box;
@@ -615,7 +608,7 @@ figure.snip1321.hover:after {
 /* About */
 section.about {
     border-bottom: none;
-    padding-top: 6%;
+    padding-top: 10%;
 }
 /* Contact Me */
 
